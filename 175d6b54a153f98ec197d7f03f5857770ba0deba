@@ -1,0 +1,9 @@
+Code-Review+2: Travis Truman (automagically) <travis_truman@cable.comcast.com>
+Code-Review+2: Jimmy McCrory <jimmy.mccrory@gmail.com>
+Workflow+1: Jimmy McCrory <jimmy.mccrory@gmail.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Thu, 17 Mar 2016 20:21:00 +0000
+Reviewed-on: https://review.openstack.org/294020
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/master
