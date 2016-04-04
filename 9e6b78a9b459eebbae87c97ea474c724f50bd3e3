@@ -1,0 +1,10 @@
+Code-Review+2: Jesse Pretorius (odyssey4me) <jesse.pretorius@rackspace.co.uk>
+Code-Review+1: Flávio Ramalho <flaviosr@lsd.ufcg.edu.br>
+Code-Review+2: Jimmy McCrory <jimmy.mccrory@gmail.com>
+Workflow+1: Jimmy McCrory <jimmy.mccrory@gmail.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Mon, 04 Apr 2016 05:21:54 +0000
+Reviewed-on: https://review.openstack.org/300686
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/master
