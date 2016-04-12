@@ -1,0 +1,9 @@
+Code-Review+2: Steve Lewis (stevelle) <steve.lewis@rackspace.com>
+Code-Review+2: Travis Truman (automagically) <travis_truman@cable.comcast.com>
+Workflow+1: Travis Truman (automagically) <travis_truman@cable.comcast.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Tue, 12 Apr 2016 00:56:22 +0000
+Reviewed-on: https://review.openstack.org/300589
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/master
