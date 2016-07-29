@@ -1,0 +1,11 @@
+Code-Review+1: Michael Gugino <michael.gugino@walmart.com>
+Code-Review+2: Major Hayden <major@mhtx.net>
+Code-Review+1: Miguel Alex Cantu (alextricity25) <miguel.cantu@rackspace.com>
+Code-Review+2: Travis Truman (automagically) <travis_truman@cable.comcast.com>
+Workflow+1: Travis Truman (automagically) <travis_truman@cable.comcast.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Fri, 29 Jul 2016 16:29:15 +0000
+Reviewed-on: https://review.openstack.org/348865
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/stable/mitaka
