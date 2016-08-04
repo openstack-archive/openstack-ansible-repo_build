@@ -1,0 +1,10 @@
+Code-Review+2: Jean-Philippe Evrard <jean-philippe.evrard@rackspace.co.uk>
+Code-Review+1: Charles Bitter <cbitter78@gmail.com>
+Code-Review+2: Major Hayden <major@mhtx.net>
+Workflow+1: Major Hayden <major@mhtx.net>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Thu, 04 Aug 2016 13:44:21 +0000
+Reviewed-on: https://review.openstack.org/344912
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/master
