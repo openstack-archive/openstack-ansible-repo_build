@@ -1,0 +1,10 @@
+Code-Review+2: Jimmy McCrory <jimmy.mccrory@gmail.com>
+Code-Review-1: Kevin Carter (cloudnull) <kevin.carter@rackspace.com>
+Code-Review+2: Jean-Philippe Evrard <jean-philippe.evrard@rackspace.co.uk>
+Workflow+1: Jean-Philippe Evrard <jean-philippe.evrard@rackspace.co.uk>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Sun, 07 Aug 2016 16:41:31 +0000
+Reviewed-on: https://review.openstack.org/350576
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/stable/mitaka
