@@ -1,0 +1,10 @@
+Code-Review+2: Jesse Pretorius (odyssey4me) <jesse.pretorius@rackspace.co.uk>
+Code-Review-1: Jean-Philippe Evrard <jean-philippe.evrard@rackspace.co.uk>
+Code-Review+2: Kevin Carter (cloudnull) <kevin.carter@rackspace.com>
+Workflow+1: Kevin Carter (cloudnull) <kevin.carter@rackspace.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Wed, 07 Sep 2016 16:57:56 +0000
+Reviewed-on: https://review.openstack.org/366726
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/master
