@@ -1,0 +1,9 @@
+Code-Review+2: Jean-Philippe Evrard <jean-philippe.evrard@rackspace.co.uk>
+Code-Review+2: Hugh Saunders <hugh@wherenow.org>
+Workflow+1: Hugh Saunders <hugh@wherenow.org>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Fri, 07 Oct 2016 11:01:43 +0000
+Reviewed-on: https://review.openstack.org/383630
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/stable/newton
