@@ -1,0 +1,10 @@
+Code-Review+2: Travis Truman (automagically) <travis_truman@cable.comcast.com>
+Code-Review+1: Donovan Francesco (drifterza) <donovan.francesco@gmail.com>
+Code-Review+2: Jimmy McCrory <jimmy.mccrory@gmail.com>
+Workflow+1: Jimmy McCrory <jimmy.mccrory@gmail.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Wed, 16 Nov 2016 14:22:45 +0000
+Reviewed-on: https://review.openstack.org/397765
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/stable/newton
