@@ -1,0 +1,9 @@
+Code-Review+2: Jimmy McCrory <jimmy.mccrory@gmail.com>
+Code-Review+2: Logan V <logan2211@gmail.com>
+Workflow+1: Logan V <logan2211@gmail.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Wed, 23 Nov 2016 04:06:47 +0000
+Reviewed-on: https://review.openstack.org/400360
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/master
