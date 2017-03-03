@@ -1,0 +1,9 @@
+Code-Review+2: Jimmy McCrory <jimmy.mccrory@gmail.com>
+Code-Review+2: Marc Gariépy <gariepy.marc@gmail.com>
+Workflow+1: Marc Gariépy <gariepy.marc@gmail.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Fri, 03 Mar 2017 20:30:26 +0000
+Reviewed-on: https://review.openstack.org/441328
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/master
