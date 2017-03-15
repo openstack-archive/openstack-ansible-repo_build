@@ -1,0 +1,10 @@
+Code-Review+2: Jean-Philippe Evrard <jean-philippe.evrard@rackspace.co.uk>
+Code-Review+1: Bjoern Teipel <bjoern.teipel@rackspace.com>
+Code-Review+2: Marc Gariépy <gariepy.marc@gmail.com>
+Workflow+1: Marc Gariépy <gariepy.marc@gmail.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Wed, 15 Mar 2017 14:22:49 +0000
+Reviewed-on: https://review.openstack.org/445922
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/master
