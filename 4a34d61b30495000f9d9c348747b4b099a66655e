@@ -1,0 +1,10 @@
+Code-Review+1: Markos Chandras (hwoarang) <mchandras@suse.de>
+Code-Review+2: Kevin Carter (cloudnull) <kevin@cloudnull.com>
+Code-Review+2: Jean-Philippe Evrard <jean-philippe.evrard@rackspace.co.uk>
+Workflow+1: Jean-Philippe Evrard <jean-philippe.evrard@rackspace.co.uk>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Mon, 08 May 2017 15:56:06 +0000
+Reviewed-on: https://review.openstack.org/462647
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/master
