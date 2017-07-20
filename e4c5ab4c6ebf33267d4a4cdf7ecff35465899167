@@ -1,0 +1,9 @@
+Code-Review+2: Major Hayden <major@mhtx.net>
+Code-Review+2: Jesse Pretorius (odyssey4me) <jesse.pretorius@rackspace.co.uk>
+Workflow+1: Jesse Pretorius (odyssey4me) <jesse.pretorius@rackspace.co.uk>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Thu, 20 Jul 2017 13:22:02 +0000
+Reviewed-on: https://review.openstack.org/484655
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/master
