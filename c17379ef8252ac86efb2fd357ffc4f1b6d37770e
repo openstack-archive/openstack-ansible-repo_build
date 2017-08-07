@@ -1,0 +1,9 @@
+Code-Review+2: Jean-Philippe Evrard <jean-philippe.evrard@rackspace.co.uk>
+Code-Review+2: Kevin Carter (cloudnull) <kevin@cloudnull.com>
+Workflow+1: Kevin Carter (cloudnull) <kevin@cloudnull.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Mon, 07 Aug 2017 18:13:40 +0000
+Reviewed-on: https://review.openstack.org/491552
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/stable/newton
