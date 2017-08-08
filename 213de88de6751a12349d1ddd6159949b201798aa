@@ -1,0 +1,9 @@
+Code-Review+2: Major Hayden <major@mhtx.net>
+Code-Review+2: Kevin Carter (cloudnull) <kevin@cloudnull.com>
+Workflow+1: Kevin Carter (cloudnull) <kevin@cloudnull.com>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Tue, 08 Aug 2017 19:02:20 +0000
+Reviewed-on: https://review.openstack.org/491790
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/stable/ocata
