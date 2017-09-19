@@ -1,0 +1,9 @@
+Code-Review+2: Logan V <logan2211@gmail.com>
+Code-Review+2: Markos Chandras (hwoarang) <mchandras@suse.de>
+Workflow+1: Markos Chandras (hwoarang) <mchandras@suse.de>
+Verified+2: Jenkins
+Submitted-by: Jenkins
+Submitted-at: Tue, 19 Sep 2017 14:06:29 +0000
+Reviewed-on: https://review.openstack.org/504702
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/master
