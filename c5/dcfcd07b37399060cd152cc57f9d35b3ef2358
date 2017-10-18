@@ -1,0 +1,9 @@
+Code-Review+2: Kevin Carter (cloudnull) <kevin@cloudnull.com>
+Code-Review+2: Major Hayden <major@mhtx.net>
+Workflow+1: Major Hayden <major@mhtx.net>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Wed, 18 Oct 2017 22:40:43 +0000
+Reviewed-on: https://review.openstack.org/513134
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/master
