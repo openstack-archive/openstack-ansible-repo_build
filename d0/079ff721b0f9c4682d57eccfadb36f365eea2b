@@ -1,0 +1,9 @@
+Code-Review+2: Major Hayden <major@mhtx.net>
+Code-Review+2: Markos Chandras (hwoarang) <mchandras@suse.de>
+Workflow+1: Markos Chandras (hwoarang) <mchandras@suse.de>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Tue, 14 Nov 2017 15:33:43 +0000
+Reviewed-on: https://review.openstack.org/518763
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/stable/pike
