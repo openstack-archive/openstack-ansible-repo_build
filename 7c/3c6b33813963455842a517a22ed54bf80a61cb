@@ -1,0 +1,9 @@
+Code-Review+2: Markos Chandras (hwoarang) <mchandras@suse.de>
+Code-Review+2: Marc Gariépy (mgariepy) <gariepy.marc@gmail.com>
+Workflow+1: Marc Gariépy (mgariepy) <gariepy.marc@gmail.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Tue, 19 Dec 2017 16:04:37 +0000
+Reviewed-on: https://review.openstack.org/529088
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/stable/pike
