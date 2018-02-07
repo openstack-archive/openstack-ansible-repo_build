@@ -1,0 +1,9 @@
+Code-Review+2: Jean-Philippe Evrard <jean-philippe@evrard.me>
+Code-Review+2: Marc Gariépy (mgariepy) <gariepy.marc@gmail.com>
+Workflow+1: Marc Gariépy (mgariepy) <gariepy.marc@gmail.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Wed, 07 Feb 2018 16:53:58 +0000
+Reviewed-on: https://review.openstack.org/541754
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/stable/ocata
