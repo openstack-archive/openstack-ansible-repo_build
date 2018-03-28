@@ -1,0 +1,9 @@
+Code-Review+2: David Wilde <david.wilde@rackspace.com>
+Code-Review+2: Jesse Pretorius (odyssey4me) <jesse.pretorius@rackspace.co.uk>
+Workflow+1: Jesse Pretorius (odyssey4me) <jesse.pretorius@rackspace.co.uk>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Wed, 28 Mar 2018 22:40:48 +0000
+Reviewed-on: https://review.openstack.org/557503
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/master
