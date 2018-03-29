@@ -1,0 +1,10 @@
+Code-Review+2: Logan V <logan2211@gmail.com>
+Code-Review+2: Jesse Pretorius (odyssey4me) <jesse.pretorius@rackspace.co.uk>
+Workflow+1: Jesse Pretorius (odyssey4me) <jesse.pretorius@rackspace.co.uk>
+Code-Review+2: Jean-Philippe Evrard <jean-philippe@evrard.me>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Thu, 29 Mar 2018 18:52:24 +0000
+Reviewed-on: https://review.openstack.org/557754
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/stable/queens
