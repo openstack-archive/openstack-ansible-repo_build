@@ -34,6 +34,7 @@
     src: "venv-build-script.sh.j2"
     dest: "/opt/venv-build-script.sh"
     mode: "0755"
+  register: _create_venv_build_script
 
 - name: Create venv build options files
   template:
@@ -48,6 +49,7 @@
     executable: "/bin/bash"
   when:
     - (item | changed) or
+      (_create_venv_build_script | changed) or
       (ansible_local['openstack_ansible']['repo_build']['need_venv_build'] | bool)
   with_items:
     - "{{ _create_venv_options_files.results }}"

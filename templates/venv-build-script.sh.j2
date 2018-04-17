@@ -85,7 +85,9 @@ pushd "{{ repo_build_venv_dir }}" &>/dev/null
     ${ROLE_VENV_PATH}/bin/python {{ repo_build_release_path }}/get-pip.py \
                                  pip setuptools wheel \
                                  --find-links {{ repo_build_release_path }} \
-                                 ${PIP_INSTALL_OPTIONS} &>${ROLE_VENV_LOG}
+                                 ${PIP_INSTALL_OPTIONS} \
+                                 --constraint {{ repo_build_release_path }}/requirements_constraints.txt \
+                                 &>${ROLE_VENV_LOG}
 
     # Install the packages into the venv
     ${ROLE_VENV_PATH}/bin/pip install \
