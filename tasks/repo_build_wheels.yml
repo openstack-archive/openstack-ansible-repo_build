@@ -32,6 +32,7 @@
 
 - name: Download requirement pip sources
   shell: >-
+    set -o pipefail;
     yes i | pip install --timeout {{ repo_build_timeout }}
     --download {{ repo_build_output }}
     --no-binary :all:
@@ -53,6 +54,7 @@
 
 - name: Create OpenStack-Ansible requirement wheels
   shell: >-
+    set -o pipefail;
     pip wheel --timeout {{ repo_build_timeout }}
     --wheel-dir {{ repo_build_output }}
     --find-links {{ repo_build_global_links_path }}
