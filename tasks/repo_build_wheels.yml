@@ -37,10 +37,8 @@
     --download {{ repo_build_output }}
     --no-binary :all:
     --constraint {{ repo_build_release_path }}/requirements_constraints.txt
-    {% if repo_build_pip_default_index is defined %}
     --index-url {{ repo_build_pip_default_index }}
     --trusted-host {{ repo_build_pip_default_index | netloc_no_port }}
-    {% endif %}
     {% if repo_build_pip_extra_indexes is defined %}
     --extra-index-url {{ repo_build_pip_extra_indexes | join(' --extra-index-url ') }}
     --trusted-host {{ repo_build_pip_extra_indexes | map('netloc_no_port') | join(' --trusted-host ') }}
@@ -63,10 +61,8 @@
     {% if repo_build_pip_no_binary is defined %}
     --no-binary {{ repo_build_pip_no_binary | join(' --no-binary ') }}
     {% endif %}
-    {% if repo_build_pip_default_index is defined %}
     --index-url {{ repo_build_pip_default_index }}
     --trusted-host {{ repo_build_pip_default_index | netloc_no_port }}
-    {% endif %}
     {% if repo_build_pip_extra_indexes is defined %}
     --extra-index-url {{ repo_build_pip_extra_indexes | join(' --extra-index-url ') }}
     --trusted-host {{ repo_build_pip_extra_indexes | map('netloc_no_port') | join(' --trusted-host ') }}
