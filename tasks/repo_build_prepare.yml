@@ -89,17 +89,40 @@
       (repo_build_wheel_rebuild | bool) or
       (repo_build_venv_rebuild | bool)
 
-- name: Install pip packages
-  pip:
-    name: "{{ repo_pip_packages }}"
-    state: "{{ repo_build_pip_package_state }}"
-    extra_args: "--constraint {{ repo_build_release_path }}/requirements_constraints.txt {{ pip_install_options }}"
-  register: install_packages
-  until: install_packages|success
-  retries: 5
-  delay: 5
+# Note(odyssey4me):
+# To cater for a situation where the pip packages are changing, but the repo
+# does not yet have the package built, we need to ensure that this task can
+# fetch from pypi. To do this we try the local repo first, then fall back to
+# using pypi.
+- name: Try installing from the repo first, then fall back to using pypi
   tags:
     - repo-build-install
+  block:
+    - name: Install pip packages (from repo)
+      pip:
+        name: "{{ repo_pip_packages }}"
+        state: "{{ repo_build_pip_package_state }}"
+        extra_args: >-
+          --constraint {{ repo_build_release_path }}/requirements_constraints.txt
+          {{ pip_install_options }}
+      register: install_packages
+      until: install_packages | success
+      retries: 5
+      delay: 5
+  rescue:
+    - name: Install pip packages (from pypi mirror)
+      pip:
+        name: "{{ repo_pip_packages }}"
+        state: "{{ repo_build_pip_package_state }}"
+        extra_args: >-
+          --index-url {{ repo_build_pip_default_index }}
+          --trusted-host {{ repo_build_pip_default_index | netloc_no_port }}
+          --constraint {{ repo_build_release_path }}/requirements_constraints.txt
+          {{ pip_install_options }}
+      register: install_packages
+      until: install_packages | success
+      retries: 5
+      delay: 5
 
 - name: Create repo log directory
   file:
