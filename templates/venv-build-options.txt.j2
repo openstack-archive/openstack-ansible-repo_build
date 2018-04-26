@@ -2,11 +2,12 @@
 # build script for each venv. These options are all set out in a file in order
 # to enable the idempotence of the venv build process.
 
+{% set venv_service_name = item['role_name'] | replace('os_', '')           %}
 # The working directory for the venv build
-ROLE_VENV_PATH="{{ repo_build_venv_build_dir }}/venvs/{{ item['role_name'] | replace('os_', '') }}"
+ROLE_VENV_PATH="{{ repo_build_venv_build_dir }}/venvs/{{ venv_service_name }}"
 
 # The name used for the venv working directory, and resulting compressed venv
-ROLE_VENV_FILE="{{ item['role_name'] | replace('os_', '') }}-{{ repo_build_release_tag }}-{{ ansible_architecture | lower }}"
+ROLE_VENV_FILE="{{ venv_service_name }}-{{ repo_build_release_tag }}-{{ ansible_architecture | lower }}"
 
 # The index options used by pip when building the venvs
 PIP_INDEX_OPTIONS=""
@@ -16,37 +17,49 @@ PIP_INDEX_OPTIONS=""
 {# in the remote_package_parts data enables the use of additional indexes.  #}
 {# This is useful when building venvs which require different constraints.  #}
 {#                                                                          #}
-{% for clone_item in local_packages.results.0.item.remote_package_parts     %}
+{% set remote_package_parts = local_packages.results.0.item.remote_package_parts %}
 {#                                                                          #}
-{#   Loop through the remote_package_parts to find the role                 #}
-{%   if clone_item['name'] == item['role_name'] | replace('os_', '')        %}
+{# We need to verify whether there are any git sources which apply to the   #}
+{# role. If there are not, then we need not bother with any of this.        #}
 {#                                                                          #}
-{#     Check whether there is a venvwithindex setting                       #}
-{%     if clone_item['original'] | search('venvwithindex')                  %}
+{% set git_source_available = ((remote_package_parts | selectattr('name', 'equalto', venv_service_name)) | list) | length > 0 %}
+{% if git_source_available | bool                                           %}
+{%   for clone_item in remote_package_parts                                 %}
 {#                                                                          #}
-{#       Check if venvwithindex is set to boolean true                      #}
-{%       set venvwithindex=clone_item['original'] | regex_replace('(?i).*venvwithindex=(true|false).*', '\\1') %}
-{%       if venvwithindex | bool                                            %}
+{#     Loop through the remote_package_parts to find the role               #}
+{%     if clone_item['name'] == item['role_name'] | replace('os_', '')      %}
 {#                                                                          #}
-{#         Add the extra indexes if they're defined                         #}
-{%         if repo_build_pip_default_index is defined                       %}
+{#       Check whether there is a venvwithindex setting                     #}
+{%       if clone_item['original'] | search('venvwithindex')                %}
+{#                                                                          #}
+{#         Check if venvwithindex is set to boolean true                    #}
+{%         set venvwithindex=clone_item['original'] | regex_replace('(?i).*venvwithindex=(true|false).*', '\\1') %}
+{%         if venvwithindex | bool                                          %}
+{#                                                                          #}
+{#           Add the extra indexes if they're defined                       #}
+{%           if repo_build_pip_default_index is defined                     %}
 PIP_INDEX_OPTIONS="${PIP_INDEX_OPTIONS} --index-url {{ repo_build_pip_default_index }}"
 PIP_INDEX_OPTIONS="${PIP_INDEX_OPTIONS} --trusted-host {{ repo_build_pip_default_index | netloc_no_port }}"
-{%         endif                                                            %}
-{%         if repo_build_pip_extra_indexes is defined                       %}
+{%           endif                                                          %}
+{%           if repo_build_pip_extra_indexes is defined                     %}
 PIP_INDEX_OPTIONS="${PIP_INDEX_OPTIONS} --extra-index-url {{ repo_build_pip_extra_indexes | join(' --extra-index-url ') }}"
 PIP_INDEX_OPTIONS="${PIP_INDEX_OPTIONS} --trusted-host {{ repo_build_pip_extra_indexes | map('netloc_no_port') | join(' --trusted-host ') }}"
+{%           endif                                                          %}
+{%         else                                                             %}
+{#           If not true, then venvwithindex is set to boolean false        #}
+PIP_INDEX_OPTIONS="${PIP_INDEX_OPTIONS} --no-index"
 {%         endif                                                            %}
 {%       else                                                               %}
-{#         If not true, then venvwithindex is set to boolean false          #}
+{#         If not set, then assume that venvwithindex is false              #}
 PIP_INDEX_OPTIONS="${PIP_INDEX_OPTIONS} --no-index"
 {%       endif                                                              %}
-{%     else                                                                 %}
-{#       If not set, then assume that venvwithindex is false                #}
-PIP_INDEX_OPTIONS="${PIP_INDEX_OPTIONS} --no-index"
 {%     endif                                                                %}
-{%   endif                                                                  %}
-{% endfor                                                                   %}
+{%   endfor                                                                 %}
+{% else                                                                     %}
+{#   If there is no git source available, then we should not be using any   #}
+{#   upstream indexes either.                                               #}
+PIP_INDEX_OPTIONS="${PIP_INDEX_OPTIONS} --no-index"
+{% endif                                                                    %}
 
 # The options used by pip when building the venvs
 PIP_INSTALL_OPTIONS="{{ repo_build_venv_pip_install_options }}"
