@@ -31,7 +31,7 @@
     src: "{{ repo_build_release_path }}/requirements.txt"
   register: slurp_requirements
 
-- name: Clone git repositories asynchronously
+- name: Clone git repositories
   become: yes
   become_user: "{{ repo_build_service_user_name }}"
   environment: "{{ global_environment_variables | default({}) }}"
@@ -47,18 +47,6 @@
     (item['name'] in slurp_requirements.content | b64decode | splitlines) or
     ((groups[item['project_group']] is defined) and (groups[item['project_group']] | length > 0))
   register: _git_clone
-  async: 1800
-  poll: 0
-
-- name: Wait for git clones to complete
-  become: yes
-  become_user: "{{ repo_build_service_user_name }}"
-  async_status:
-    jid: "{{ item['ansible_job_id'] }}"
-  register: _git_jobs
-  until: _git_jobs['finished'] | bool
+  until: _git_clone | success
   delay: 5
-  retries: 360
-  with_items: "{{ _git_clone['results'] }}"
-  when:
-    - item['ansible_job_id'] is defined
+  retries: 10
