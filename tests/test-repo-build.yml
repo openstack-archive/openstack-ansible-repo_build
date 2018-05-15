@@ -16,12 +16,31 @@
 - name: Build repo
   hosts: repo_all
   user: root
+  vars:
+    test_data_file_path: "{{ lookup('env', 'WORKING_DIR') }}/tests/test-data.yml"
+  vars_files:
+    - test-vars.yml
   pre_tasks:
+    # Test data output from the py_pkgs lookup
+    # To produce a fresh version of this, execute:
+    # /opt/ansible-runtime/bin/python /etc/ansible/roles/plugins/lookup/py_pkgs.py \
+    #     /opt/openstack-ansible /etc/ansible/roles /etc/openstack_deploy | \
+    #     /opt/ansible-runtime/bin/python -c 'import sys, yaml, json; yaml.safe_dump(json.load(sys.stdin), sys.stdout, default_flow_style=False)'
+    # then perform the final minor adjustment of the top-end structure to fit the current structure
+    - name: Import the test data
+      set_fact:
+        local_packages:
+          results:
+            -
+              item:
+                "{{ (lookup('file', test_data_file_path) | from_yaml)[0] }}"
+
     - name: Check if this is an OpenStack-CI nodepool instance
       stat:
         path: /etc/nodepool/provider
       register: nodepool
       delegate_to: localhost
+
     - name: Determine the existing Ubuntu repo URL (only on OpenStack-CI)
       shell: 'awk "/^deb .*ubuntu\/? {{ ansible_distribution_release }} main/ {print \$2; exit}" /etc/apt/sources.list'
       register: ubuntu_repo_url
@@ -30,6 +49,7 @@
         - ansible_pkg_mgr == 'apt'
         - nodepool.stat.exists | bool
       delegate_to: localhost
+
     - name: Set Ubuntu Cloud Archive repo URL based on discovered information
       set_fact:
         uca_apt_repo_url: "{{ ubuntu_repo_url.stdout | netorigin }}/ubuntu-cloud-archive"
@@ -43,42 +63,54 @@
       command: ls -1 {{ repo_build_venv_dir }}/
       register: venv_folder_content
       changed_when: false
+
     - name: Ensure that the keystone venv is present
       assert:
         that: "'keystone-{{ repo_build_release_tag }}-{{ ansible_architecture | lower }}.tgz' in venv_folder_content.stdout"
+
     - name: Ensure that the tempest venv is present
       assert:
         that: "'tempest-{{ repo_build_release_tag }}-{{ ansible_architecture | lower }}.tgz' in venv_folder_content.stdout"
+
     - name: Ensure that the nova venv is NOT present
       assert:
         that: "'nova-{{ repo_build_release_tag }}-{{ ansible_architecture | lower }}.tgz' not in venv_folder_content.stdout"
+
     - name: List the files in the git folder
       command: ls -1 /var/www/repo/openstackgit/
       register: git_folder_content
       changed_when: false
+
     - name: Ensure that the keystone git repo is present
       assert:
         that: "'keystone' in git_folder_content.stdout"
+
     - name: Ensure that the tempest git repo is present
       assert:
         that: "'tempest' in git_folder_content.stdout"
+
     - name: Ensure that the requirements git repo is present
       assert:
         that: "'requirements' in git_folder_content.stdout"
+
     - name: Ensure that the nova git repo is NOT present
       assert:
         that: "'nova' not in git_folder_content.stdout"
+
     - name: Slurp upper constraints
       slurp:
         src: "{{ repo_build_git_dir }}/requirements/upper-constraints.txt"
       register: slurp_upper_constraints
+
     - name: Slurp requirements constraints
       slurp:
         src: "{{ repo_build_release_path }}/requirements_constraints.txt"
       register: slurp_requirements_constraints
+
     - name: Set fact for requirements constraints content
       set_fact:
          requirements_constraints_content: "{{ slurp_requirements_constraints.content | b64decode }}"
+
     - name: Set fact for upper constraints content
       set_fact:
         upper_constraints_list: >
@@ -91,6 +123,7 @@
           {%-   set _ = constraints.append(constraint) %}
           {%- endfor %}
           {{- constraints -}}
+
     - name: Set fact for upper constraints override
       set_fact:
         upper_constraints_override_list: >
@@ -101,6 +134,7 @@
           {%-   set _ = override_packages.append(name_normalized) %}
           {%- endfor %}
           {{- override_packages -}}
+
     - name: Set fact for global pins
       set_fact:
         global_pins_list: >
@@ -111,6 +145,7 @@
           {%-   set _ = global_pins.append(name_normalized) %}
           {%- endfor %}
           {{- global_pins -}}
+
     - name: Set facts for packages built from git sources
       set_fact:
         git_package_list: >
@@ -119,6 +154,7 @@
           {%-   set _ = git_packages.append(remote_package_part['egg_name']) %}
           {%- endfor %}
           {{- git_packages -}}
+
     - name: Ensure that upper constraints from the OpenStack requirements repo are complete
       assert:
         that: item in requirements_constraints_content
@@ -128,15 +164,15 @@
         - item | regex_replace('(\[|>=|<=|>|<|==|~=|!=).*$','') not in upper_constraints_override_list
         - item | regex_replace('(\[|>=|<=|>|<|==|~=|!=).*$','') not in global_pins_list
         - item | regex_replace('(\[|>=|<=|>|<|==|~=|!=).*$','') not in git_package_list
+
     - name: Ensure that global pins have been applied
       assert:
         that: item in requirements_constraints_content
       with_items: "{{ local_packages.results.0.item.role_requirement_files.global_pins.pinned_packages }}"
       when:
         - item | regex_replace('(\[|>=|<=|>|<|==|~=|!=).*$','') not in upper_constraints_override_list
+
     - name: Ensure that upper constraints overrides are applied
       assert:
         that: item in requirements_constraints_content
       with_items: "{{ repo_build_upper_constraints_overrides }}"
-  vars_files:
-    - test-vars.yml
