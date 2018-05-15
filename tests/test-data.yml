@@ -1,0 +1,1283 @@
+# Test data output from the py_pkgs lookup
+# To produce a fresh version of this, execute:
+# /opt/ansible-runtime/bin/python /etc/ansible/roles/plugins/lookup/py_pkgs.py \
+#     /opt/openstack-ansible /etc/ansible/roles /etc/openstack_deploy | \
+#     /opt/ansible-runtime/bin/python -c 'import sys, yaml, json; yaml.safe_dump(json.load(sys.stdin), sys.stdout, default_flow_style=False)'
+- packages:
+  - alembic>=0.7.2
+  - ansible==2.3.2.0
+  - aodh
+  - argparse
+  - barbican
+  - ceilometer
+  - ceilometermiddleware
+  - cinder
+  - cliff
+  - configobj
+  - cryptography
+  - cython
+  - daemonize
+  - ddt
+  - designate
+  - designate_dashboard
+  - django-appconf
+  - django-openstack-auth
+  - dnspython
+  - dragonflow
+  - ecdsa
+  - futures
+  - glance
+  - gnocchi[mysql,{{ gnocchi_storage_driver | default('file') }}]
+  - gnocchiclient
+  - greenlet
+  - heat
+  - horizon
+  - httplib2
+  - ironic
+  - ironic-oneview-cli
+  - ironic-oneviewd
+  - ironic-ui
+  - junitxml
+  - keystone
+  - keystonemiddleware
+  - ldappool
+  - libvirt-python
+  - lxc-python2
+  - lxml
+  - magnum
+  - magnum-ui
+  - molteniron
+  - mysql-python
+  - ndg-httpsclient>=0.4.2;python_version<'3.0'
+  - netaddr!=0.7.16,>=0.7.13
+  - networking-calico
+  - neutron
+  - neutron-lbaas-dashboard
+  - neutron_dynamic_routing
+  - neutron_fwaas
+  - neutron_lbaas
+  - neutron_vpnaas
+  - nose
+  - nova
+  - nova-lxd
+  - nova-powervm
+  - octavia
+  - os-brick
+  - os-client-config
+  - oslo.config
+  - oslo.log
+  - oslo.middleware
+  - osprofiler
+  - pbr
+  - pexpect
+  - pip==9.0.3
+  - ply
+  - prettytable<0.8,>=0.7.1
+  - pyasn1!=0.2.3
+  - pyasn1-modules
+  - pycrypto
+  - pyeclib
+  - pyldap
+  - pylxd
+  - pymongo
+  - pymysql>=0.6.2
+  - pyopenssl>=0.14
+  - pysaml2
+  - python-ceilometerclient
+  - python-cinderclient
+  - python-designateclient
+  - python-etcd
+  - python-glanceclient
+  - python-heatclient
+  - python-ironicclient
+  - python-keystoneclient
+  - python-memcached>=1.56
+  - python-neutronclient
+  - python-novaclient
+  - python-octaviaclient
+  - python-openstackclient
+  - python-saharaclient
+  - python-subunit
+  - python-swiftclient
+  - python-troveclient
+  - pyyaml>=3.10.0
+  - repoze.lru
+  - requests
+  - sahara
+  - sahara_dashboard
+  - setuptools==39.0.1
+  - shade
+  - sqlalchemy
+  - sqlalchemy-utils
+  - sqlalchemy_utils
+  - swift
+  - swift3
+  - tempest
+  - testscenarios
+  - tooz
+  - trove
+  - trove_dashboard
+  - urllib3
+  - uwsgi
+  - virtualenv-tools
+  - virtualenv>=13.1.0
+  - warlock
+  - websockify
+  - wheel==0.31.0
+  remote_package_parts:
+  - egg_name: aodh
+    fragment: null
+    name: aodh
+    original: git+https://git.openstack.org/openstack/aodh@60fba82162ec601256169fcfcf12baa81aeb0855#egg=aodh&gitname=aodh&projectgroup=aodh_all
+    project_group: aodh_all
+    url: https://git.openstack.org/openstack/aodh
+    version: 60fba82162ec601256169fcfcf12baa81aeb0855
+  - egg_name: barbican
+    fragment: null
+    name: barbican
+    original: git+https://git.openstack.org/openstack/barbican@bb9e08995380a3d553a94aff5ff85a4cdfe14ef5#egg=barbican&gitname=barbican&projectgroup=barbican_all
+    project_group: barbican_all
+    url: https://git.openstack.org/openstack/barbican
+    version: bb9e08995380a3d553a94aff5ff85a4cdfe14ef5
+  - egg_name: ceilometer
+    fragment: null
+    name: ceilometer
+    original: git+https://git.openstack.org/openstack/ceilometer@51d4ea0a1544db06159a8d8037131428a42cc651#egg=ceilometer&gitname=ceilometer&projectgroup=ceilometer_all
+    project_group: ceilometer_all
+    url: https://git.openstack.org/openstack/ceilometer
+    version: 51d4ea0a1544db06159a8d8037131428a42cc651
+  - egg_name: cinder
+    fragment: null
+    name: cinder
+    original: git+https://git.openstack.org/openstack/cinder@acfdbb62f706451bf1faf3d6926e9267028186c8#egg=cinder&gitname=cinder&projectgroup=cinder_all
+    project_group: cinder_all
+    url: https://git.openstack.org/openstack/cinder
+    version: acfdbb62f706451bf1faf3d6926e9267028186c8
+  - egg_name: designate
+    fragment: null
+    name: designate
+    original: git+https://git.openstack.org/openstack/designate@12fbb38799d6731862f07a9e299d5476a5c02f90#egg=designate&gitname=designate&projectgroup=designate_all
+    project_group: designate_all
+    url: https://git.openstack.org/openstack/designate
+    version: 12fbb38799d6731862f07a9e299d5476a5c02f90
+  - egg_name: designate_dashboard
+    fragment: null
+    name: designate-dashboard
+    original: git+https://git.openstack.org/openstack/designate-dashboard@c5f20d069738d91d34a36e9c99938b282ed9646e#egg=designate_dashboard&gitname=designate-dashboard&projectgroup=horizon_all
+    project_group: horizon_all
+    url: https://git.openstack.org/openstack/designate-dashboard
+    version: c5f20d069738d91d34a36e9c99938b282ed9646e
+  - egg_name: dragonflow
+    fragment: null
+    name: dragonflow
+    original: git+https://git.openstack.org/openstack/dragonflow@84f1a26ff8e976b753593dc445e09a4c1a675a21#egg=dragonflow&gitname=dragonflow&projectgroup=neutron_all
+    project_group: neutron_all
+    url: https://git.openstack.org/openstack/dragonflow
+    version: 84f1a26ff8e976b753593dc445e09a4c1a675a21
+  - egg_name: glance
+    fragment: null
+    name: glance
+    original: git+https://git.openstack.org/openstack/glance@5c1f76d91012c9cc7b12f76e917af9e9a9bb7667#egg=glance&gitname=glance&projectgroup=glance_all
+    project_group: glance_all
+    url: https://git.openstack.org/openstack/glance
+    version: 5c1f76d91012c9cc7b12f76e917af9e9a9bb7667
+  - egg_name: gnocchi
+    fragment: null
+    name: gnocchi
+    original: git+https://github.com/gnocchixyz/gnocchi@2934679eab23bc29ad40e27264e6304de8197d43#egg=gnocchi&gitname=gnocchi&projectgroup=gnocchi_all
+    project_group: gnocchi_all
+    url: https://github.com/gnocchixyz/gnocchi
+    version: 2934679eab23bc29ad40e27264e6304de8197d43
+  - egg_name: heat
+    fragment: null
+    name: heat
+    original: git+https://git.openstack.org/openstack/heat@4dca7dcc5085cbd4c94103500f2846a27fa7d8fa#egg=heat&gitname=heat&projectgroup=heat_all
+    project_group: heat_all
+    url: https://git.openstack.org/openstack/heat
+    version: 4dca7dcc5085cbd4c94103500f2846a27fa7d8fa
+  - egg_name: horizon
+    fragment: null
+    name: horizon
+    original: git+https://git.openstack.org/openstack/horizon@45deda57493d78862b29bc253b972fac0e198a62#egg=horizon&gitname=horizon&projectgroup=horizon_all
+    project_group: horizon_all
+    url: https://git.openstack.org/openstack/horizon
+    version: 45deda57493d78862b29bc253b972fac0e198a62
+  - egg_name: ironic
+    fragment: null
+    name: ironic
+    original: git+https://git.openstack.org/openstack/ironic@4ca48b4f60d51e1b0ba8546fd1499270a7ceab09#egg=ironic&gitname=ironic&projectgroup=ironic_all
+    project_group: ironic_all
+    url: https://git.openstack.org/openstack/ironic
+    version: 4ca48b4f60d51e1b0ba8546fd1499270a7ceab09
+  - egg_name: ironic_ui
+    fragment: null
+    name: ironic-ui
+    original: git+https://git.openstack.org/openstack/ironic-ui@783a3283100d0256e45db4f33a913556416a5bc6#egg=ironic_ui&gitname=ironic-ui&projectgroup=horizon_all
+    project_group: horizon_all
+    url: https://git.openstack.org/openstack/ironic-ui
+    version: 783a3283100d0256e45db4f33a913556416a5bc6
+  - egg_name: keystone
+    fragment: null
+    name: keystone
+    original: git+https://git.openstack.org/openstack/keystone@22af1d9f35c86e9c5bca288c2996be5c19e3cd61#egg=keystone&gitname=keystone&projectgroup=keystone_all
+    project_group: keystone_all
+    url: https://git.openstack.org/openstack/keystone
+    version: 22af1d9f35c86e9c5bca288c2996be5c19e3cd61
+  - egg_name: magnum
+    fragment: null
+    name: magnum
+    original: git+https://git.openstack.org/openstack/magnum@fa04f3d3352fda5b31145be5e29acc2ee3d0481d#egg=magnum&gitname=magnum&projectgroup=magnum_all
+    project_group: magnum_all
+    url: https://git.openstack.org/openstack/magnum
+    version: fa04f3d3352fda5b31145be5e29acc2ee3d0481d
+  - egg_name: magnum_ui
+    fragment: null
+    name: magnum-ui
+    original: git+https://git.openstack.org/openstack/magnum-ui@7d6f02e606064395689dd5ea7430cdae4a6c1fd8#egg=magnum_ui&gitname=magnum-ui&projectgroup=horizon_all
+    project_group: horizon_all
+    url: https://git.openstack.org/openstack/magnum-ui
+    version: 7d6f02e606064395689dd5ea7430cdae4a6c1fd8
+  - egg_name: molteniron
+    fragment: null
+    name: molteniron
+    original: git+https://git.openstack.org/openstack/molteniron@094276cda77d814d07ad885e7d63de8d1243750a#egg=molteniron&gitname=molteniron&projectgroup=molteniron_all
+    project_group: molteniron_all
+    url: https://git.openstack.org/openstack/molteniron
+    version: 094276cda77d814d07ad885e7d63de8d1243750a
+  - egg_name: networking_calico
+    fragment: null
+    name: networking-calico
+    original: git+https://git.openstack.org/openstack/networking-calico@7bfe655fba008e57971ee7ebde14bcd0c236ea53#egg=networking_calico&gitname=networking-calico&projectgroup=neutron_all
+    project_group: neutron_all
+    url: https://git.openstack.org/openstack/networking-calico
+    version: 7bfe655fba008e57971ee7ebde14bcd0c236ea53
+  - egg_name: neutron
+    fragment: null
+    name: neutron
+    original: git+https://git.openstack.org/openstack/neutron@f3a56676f361bfda8f5095b8937673f97398b201#egg=neutron&gitname=neutron&projectgroup=neutron_all
+    project_group: neutron_all
+    url: https://git.openstack.org/openstack/neutron
+    version: f3a56676f361bfda8f5095b8937673f97398b201
+  - egg_name: neutron_dynamic_routing
+    fragment: null
+    name: neutron-dynamic-routing
+    original: git+https://git.openstack.org/openstack/neutron-dynamic-routing@c1914078fc2d75ca18e875cdc55a3ee49a9bcd9c#egg=neutron_dynamic_routing&gitname=neutron-dynamic-routing&projectgroup=neutron_all
+    project_group: neutron_all
+    url: https://git.openstack.org/openstack/neutron-dynamic-routing
+    version: c1914078fc2d75ca18e875cdc55a3ee49a9bcd9c
+  - egg_name: neutron_fwaas
+    fragment: null
+    name: neutron-fwaas
+    original: git+https://git.openstack.org/openstack/neutron-fwaas@d02659fc5da30791eab93bb8dcc362a2b02c0499#egg=neutron_fwaas&gitname=neutron-fwaas&projectgroup=neutron_all
+    project_group: neutron_all
+    url: https://git.openstack.org/openstack/neutron-fwaas
+    version: d02659fc5da30791eab93bb8dcc362a2b02c0499
+  - egg_name: neutron_lbaas
+    fragment: null
+    name: neutron-lbaas
+    original: git+https://git.openstack.org/openstack/neutron-lbaas@d52ad67500aacdb4c2a1321363bfe87de4e6b518#egg=neutron_lbaas&gitname=neutron-lbaas&projectgroup=neutron_all
+    project_group: neutron_all
+    url: https://git.openstack.org/openstack/neutron-lbaas
+    version: d52ad67500aacdb4c2a1321363bfe87de4e6b518
+  - egg_name: neutron_lbaas_dashboard
+    fragment: null
+    name: neutron-lbaas-dashboard
+    original: git+https://git.openstack.org/openstack/neutron-lbaas-dashboard@98c7d38419405613662e16326cff7339d10581d3#egg=neutron_lbaas_dashboard&gitname=neutron-lbaas-dashboard&projectgroup=horizon_all
+    project_group: horizon_all
+    url: https://git.openstack.org/openstack/neutron-lbaas-dashboard
+    version: 98c7d38419405613662e16326cff7339d10581d3
+  - egg_name: neutron_vpnaas
+    fragment: null
+    name: neutron-vpnaas
+    original: git+https://git.openstack.org/openstack/neutron-vpnaas@60e4e7113b5fbbf28e97ebce2f40b7f1675200e6#egg=neutron_vpnaas&gitname=neutron-vpnaas&projectgroup=neutron_all
+    project_group: neutron_all
+    url: https://git.openstack.org/openstack/neutron-vpnaas
+    version: 60e4e7113b5fbbf28e97ebce2f40b7f1675200e6
+  - egg_name: nova
+    fragment: null
+    name: nova
+    original: git+https://git.openstack.org/openstack/nova@57c28a379ff6b998953d92983d3be53db3618b69#egg=nova&gitname=nova&projectgroup=nova_all
+    project_group: nova_all
+    url: https://git.openstack.org/openstack/nova
+    version: 57c28a379ff6b998953d92983d3be53db3618b69
+  - egg_name: nova_lxd
+    fragment: null
+    name: nova-lxd
+    original: git+https://git.openstack.org/openstack/nova-lxd@a9234659779e3c054a7db976c830826f571e1db6#egg=nova_lxd&gitname=nova-lxd&projectgroup=nova_all
+    project_group: nova_all
+    url: https://git.openstack.org/openstack/nova-lxd
+    version: a9234659779e3c054a7db976c830826f571e1db6
+  - egg_name: nova_powervm
+    fragment: null
+    name: nova-powervm
+    original: git+https://git.openstack.org/openstack/nova-powervm@855c4182af7a90dd60db63443a36090dad74aee5#egg=nova_powervm&gitname=nova-powervm&projectgroup=nova_all
+    project_group: nova_all
+    url: https://git.openstack.org/openstack/nova-powervm
+    version: 855c4182af7a90dd60db63443a36090dad74aee5
+  - egg_name: noVNC
+    fragment: null
+    name: novnc
+    original: git+https://github.com/novnc/noVNC@b5c982ea4207a711a6d335019eb890ac9c3a538c#egg=noVNC&gitname=noVNC&projectgroup=nova_console
+    project_group: nova_console
+    url: https://github.com/novnc/noVNC
+    version: b5c982ea4207a711a6d335019eb890ac9c3a538c
+  - egg_name: octavia
+    fragment: null
+    name: octavia
+    original: git+https://git.openstack.org/openstack/octavia@90599da0412de88b587e3c8249e2a3b77f69f09d#egg=octavia&gitname=octavia&projectgroup=octavia_all
+    project_group: octavia_all
+    url: https://git.openstack.org/openstack/octavia
+    version: 90599da0412de88b587e3c8249e2a3b77f69f09d
+  - egg_name: rally
+    fragment: null
+    name: rally
+    original: git+https://git.openstack.org/openstack/rally@8d2faecc098130bc3c0c69fb0e610aeac6bc6c0b#egg=rally&gitname=rally&projectgroup=utility_all&venvwithindex=True&ignorerequirements=True
+    project_group: utility_all
+    url: https://git.openstack.org/openstack/rally
+    version: 8d2faecc098130bc3c0c69fb0e610aeac6bc6c0b
+  - egg_name: requirements
+    fragment: null
+    name: requirements
+    original: git+https://git.openstack.org/openstack/requirements@5ca55e452a9fa941cd086d42f15467057867f215#egg=requirements&gitname=requirements&projectgroup=all
+    project_group: all
+    url: https://git.openstack.org/openstack/requirements
+    version: 5ca55e452a9fa941cd086d42f15467057867f215
+  - egg_name: sahara
+    fragment: null
+    name: sahara
+    original: git+https://git.openstack.org/openstack/sahara@e1f9e3aed86830d038c5c3031c634a8c8d71cea9#egg=sahara&gitname=sahara&projectgroup=sahara_all
+    project_group: sahara_all
+    url: https://git.openstack.org/openstack/sahara
+    version: e1f9e3aed86830d038c5c3031c634a8c8d71cea9
+  - egg_name: sahara_dashboard
+    fragment: null
+    name: sahara-dashboard
+    original: git+https://git.openstack.org/openstack/sahara-dashboard@998fa6e34ed7584657e4c544832cd04c94206af0#egg=sahara_dashboard&gitname=sahara-dashboard&projectgroup=horizon_all
+    project_group: horizon_all
+    url: https://git.openstack.org/openstack/sahara-dashboard
+    version: 998fa6e34ed7584657e4c544832cd04c94206af0
+  - egg_name: spice_html5
+    fragment: null
+    name: spice-html5
+    original: git+https://github.com/SPICE/spice-html5@54cc41299bea8cd681ed0262735e0fd821cd774a#egg=spice_html5&gitname=spice-html5&projectgroup=nova_console
+    project_group: nova_console
+    url: https://github.com/SPICE/spice-html5
+    version: 54cc41299bea8cd681ed0262735e0fd821cd774a
+  - egg_name: swift
+    fragment: null
+    name: swift
+    original: git+https://git.openstack.org/openstack/swift@0ff2d5e3b85a42914a89eac64ed9a87172334a2c#egg=swift&gitname=swift&projectgroup=swift_all
+    project_group: swift_all
+    url: https://git.openstack.org/openstack/swift
+    version: 0ff2d5e3b85a42914a89eac64ed9a87172334a2c
+  - egg_name: swift3
+    fragment: null
+    name: swift3
+    original: git+https://git.openstack.org/openstack/swift3@520b8888343a96ef0253af8701b45f0bd5238264#egg=swift3&gitname=swift3&projectgroup=swift_all
+    project_group: swift_all
+    url: https://git.openstack.org/openstack/swift3
+    version: 520b8888343a96ef0253af8701b45f0bd5238264
+  - egg_name: trove
+    fragment: null
+    name: trove
+    original: git+https://git.openstack.org/openstack/trove@c3b1546b95792a54f1e05feb4a94cac3415c1786#egg=trove&gitname=trove&projectgroup=trove_all
+    project_group: trove_all
+    url: https://git.openstack.org/openstack/trove
+    version: c3b1546b95792a54f1e05feb4a94cac3415c1786
+  - egg_name: trove_dashboard
+    fragment: null
+    name: trove-dashboard
+    original: git+https://git.openstack.org/openstack/trove-dashboard@eb6774f1cd2ed017614f958348a216c977899dac#egg=trove_dashboard&gitname=trove-dashboard&projectgroup=horizon_all
+    project_group: horizon_all
+    url: https://git.openstack.org/openstack/trove-dashboard
+    version: eb6774f1cd2ed017614f958348a216c977899dac
+  remote_packages:
+  - git+https://git.openstack.org/openstack/aodh@60fba82162ec601256169fcfcf12baa81aeb0855#egg=aodh&gitname=aodh&projectgroup=aodh_all
+  - git+https://git.openstack.org/openstack/barbican@bb9e08995380a3d553a94aff5ff85a4cdfe14ef5#egg=barbican&gitname=barbican&projectgroup=barbican_all
+  - git+https://git.openstack.org/openstack/ceilometer@51d4ea0a1544db06159a8d8037131428a42cc651#egg=ceilometer&gitname=ceilometer&projectgroup=ceilometer_all
+  - git+https://git.openstack.org/openstack/cinder@acfdbb62f706451bf1faf3d6926e9267028186c8#egg=cinder&gitname=cinder&projectgroup=cinder_all
+  - git+https://git.openstack.org/openstack/designate-dashboard@c5f20d069738d91d34a36e9c99938b282ed9646e#egg=designate_dashboard&gitname=designate-dashboard&projectgroup=horizon_all
+  - git+https://git.openstack.org/openstack/designate@12fbb38799d6731862f07a9e299d5476a5c02f90#egg=designate&gitname=designate&projectgroup=designate_all
+  - git+https://git.openstack.org/openstack/dragonflow@84f1a26ff8e976b753593dc445e09a4c1a675a21#egg=dragonflow&gitname=dragonflow&projectgroup=neutron_all
+  - git+https://git.openstack.org/openstack/glance@5c1f76d91012c9cc7b12f76e917af9e9a9bb7667#egg=glance&gitname=glance&projectgroup=glance_all
+  - git+https://git.openstack.org/openstack/heat@4dca7dcc5085cbd4c94103500f2846a27fa7d8fa#egg=heat&gitname=heat&projectgroup=heat_all
+  - git+https://git.openstack.org/openstack/horizon@45deda57493d78862b29bc253b972fac0e198a62#egg=horizon&gitname=horizon&projectgroup=horizon_all
+  - git+https://git.openstack.org/openstack/ironic-ui@783a3283100d0256e45db4f33a913556416a5bc6#egg=ironic_ui&gitname=ironic-ui&projectgroup=horizon_all
+  - git+https://git.openstack.org/openstack/ironic@4ca48b4f60d51e1b0ba8546fd1499270a7ceab09#egg=ironic&gitname=ironic&projectgroup=ironic_all
+  - git+https://git.openstack.org/openstack/keystone@22af1d9f35c86e9c5bca288c2996be5c19e3cd61#egg=keystone&gitname=keystone&projectgroup=keystone_all
+  - git+https://git.openstack.org/openstack/magnum-ui@7d6f02e606064395689dd5ea7430cdae4a6c1fd8#egg=magnum_ui&gitname=magnum-ui&projectgroup=horizon_all
+  - git+https://git.openstack.org/openstack/magnum@fa04f3d3352fda5b31145be5e29acc2ee3d0481d#egg=magnum&gitname=magnum&projectgroup=magnum_all
+  - git+https://git.openstack.org/openstack/molteniron@094276cda77d814d07ad885e7d63de8d1243750a#egg=molteniron&gitname=molteniron&projectgroup=molteniron_all
+  - git+https://git.openstack.org/openstack/networking-calico@7bfe655fba008e57971ee7ebde14bcd0c236ea53#egg=networking_calico&gitname=networking-calico&projectgroup=neutron_all
+  - git+https://git.openstack.org/openstack/neutron-dynamic-routing@c1914078fc2d75ca18e875cdc55a3ee49a9bcd9c#egg=neutron_dynamic_routing&gitname=neutron-dynamic-routing&projectgroup=neutron_all
+  - git+https://git.openstack.org/openstack/neutron-fwaas@d02659fc5da30791eab93bb8dcc362a2b02c0499#egg=neutron_fwaas&gitname=neutron-fwaas&projectgroup=neutron_all
+  - git+https://git.openstack.org/openstack/neutron-lbaas-dashboard@98c7d38419405613662e16326cff7339d10581d3#egg=neutron_lbaas_dashboard&gitname=neutron-lbaas-dashboard&projectgroup=horizon_all
+  - git+https://git.openstack.org/openstack/neutron-lbaas@d52ad67500aacdb4c2a1321363bfe87de4e6b518#egg=neutron_lbaas&gitname=neutron-lbaas&projectgroup=neutron_all
+  - git+https://git.openstack.org/openstack/neutron-vpnaas@60e4e7113b5fbbf28e97ebce2f40b7f1675200e6#egg=neutron_vpnaas&gitname=neutron-vpnaas&projectgroup=neutron_all
+  - git+https://git.openstack.org/openstack/neutron@f3a56676f361bfda8f5095b8937673f97398b201#egg=neutron&gitname=neutron&projectgroup=neutron_all
+  - git+https://git.openstack.org/openstack/nova-lxd@a9234659779e3c054a7db976c830826f571e1db6#egg=nova_lxd&gitname=nova-lxd&projectgroup=nova_all
+  - git+https://git.openstack.org/openstack/nova-powervm@855c4182af7a90dd60db63443a36090dad74aee5#egg=nova_powervm&gitname=nova-powervm&projectgroup=nova_all
+  - git+https://git.openstack.org/openstack/nova@57c28a379ff6b998953d92983d3be53db3618b69#egg=nova&gitname=nova&projectgroup=nova_all
+  - git+https://git.openstack.org/openstack/octavia@90599da0412de88b587e3c8249e2a3b77f69f09d#egg=octavia&gitname=octavia&projectgroup=octavia_all
+  - git+https://git.openstack.org/openstack/rally@8d2faecc098130bc3c0c69fb0e610aeac6bc6c0b#egg=rally&gitname=rally&projectgroup=utility_all&venvwithindex=True&ignorerequirements=True
+  - git+https://git.openstack.org/openstack/requirements@5ca55e452a9fa941cd086d42f15467057867f215#egg=requirements&gitname=requirements&projectgroup=all
+  - git+https://git.openstack.org/openstack/sahara-dashboard@998fa6e34ed7584657e4c544832cd04c94206af0#egg=sahara_dashboard&gitname=sahara-dashboard&projectgroup=horizon_all
+  - git+https://git.openstack.org/openstack/sahara@e1f9e3aed86830d038c5c3031c634a8c8d71cea9#egg=sahara&gitname=sahara&projectgroup=sahara_all
+  - git+https://git.openstack.org/openstack/swift3@520b8888343a96ef0253af8701b45f0bd5238264#egg=swift3&gitname=swift3&projectgroup=swift_all
+  - git+https://git.openstack.org/openstack/swift@0ff2d5e3b85a42914a89eac64ed9a87172334a2c#egg=swift&gitname=swift&projectgroup=swift_all
+  - git+https://git.openstack.org/openstack/trove-dashboard@eb6774f1cd2ed017614f958348a216c977899dac#egg=trove_dashboard&gitname=trove-dashboard&projectgroup=horizon_all
+  - git+https://git.openstack.org/openstack/trove@c3b1546b95792a54f1e05feb4a94cac3415c1786#egg=trove&gitname=trove&projectgroup=trove_all
+  - git+https://github.com/SPICE/spice-html5@54cc41299bea8cd681ed0262735e0fd821cd774a#egg=spice_html5&gitname=spice-html5&projectgroup=nova_console
+  - git+https://github.com/gnocchixyz/gnocchi@2934679eab23bc29ad40e27264e6304de8197d43#egg=gnocchi&gitname=gnocchi&projectgroup=gnocchi_all
+  - git+https://github.com/novnc/noVNC@b5c982ea4207a711a6d335019eb890ac9c3a538c#egg=noVNC&gitname=noVNC&projectgroup=nova_console
+  role_packages:
+    galera_client:
+    - mysql-python
+    galera_server:
+    - mysql-python
+    - pycrypto
+    lxc_hosts:
+    - lxc-python2
+    os_aodh:
+    - alembic>=0.7.2
+    - aodh
+    - ceilometermiddleware
+    - cryptography
+    - gnocchiclient
+    - httplib2
+    - pymysql>=0.6.2
+    - python-ceilometerclient
+    - python-keystoneclient
+    - python-memcached
+    - sqlalchemy-utils
+    - sqlalchemy>=0.9.7
+    - virtualenv
+    - virtualenv-tools
+    - warlock
+    os_barbican:
+    - barbican
+    - pymysql
+    - python-keystoneclient
+    - python-memcached
+    - uwsgi
+    - virtualenv
+    - virtualenv-tools
+    os_ceilometer:
+    - ceilometer
+    - ceilometermiddleware
+    - cryptography
+    - gnocchiclient
+    - httplib2
+    - libvirt-python
+    - pymongo
+    - pymysql
+    - python-ceilometerclient
+    - python-keystoneclient
+    - python-memcached
+    - tooz
+    - virtualenv
+    - virtualenv-tools
+    - warlock
+    os_cinder:
+    - cinder
+    - cryptography
+    - ecdsa
+    - httplib2
+    - keystonemiddleware
+    - pymysql
+    - python-cinderclient
+    - python-keystoneclient
+    - python-memcached
+    - uwsgi
+    - virtualenv
+    - virtualenv-tools
+    os_designate:
+    - cryptography
+    - designate
+    - httplib2
+    - pymysql
+    - python-designateclient
+    - python-keystoneclient
+    - python-memcached
+    - virtualenv
+    - virtualenv-tools
+    - warlock
+    os_glance:
+    - cryptography
+    - glance
+    - httplib2
+    - keystonemiddleware
+    - os-brick
+    - pymysql
+    - python-cinderclient
+    - python-glanceclient
+    - python-keystoneclient
+    - python-memcached
+    - python-swiftclient
+    - uwsgi
+    - virtualenv
+    - virtualenv-tools
+    - warlock
+    os_gnocchi:
+    - cryptography
+    - gnocchi[mysql,{{ gnocchi_storage_driver | default('file') }}]
+    - gnocchiclient
+    - httplib2
+    - keystonemiddleware
+    - python-keystoneclient
+    - python-memcached
+    - virtualenv
+    - virtualenv-tools
+    os_heat:
+    - cryptography
+    - heat
+    - httplib2
+    - keystonemiddleware
+    - pymysql
+    - python-ceilometerclient
+    - python-cinderclient
+    - python-glanceclient
+    - python-heatclient
+    - python-keystoneclient
+    - python-memcached
+    - python-neutronclient
+    - python-novaclient
+    - python-openstackclient
+    - python-swiftclient
+    - python-troveclient
+    - uwsgi
+    - virtualenv
+    - virtualenv-tools
+    os_horizon:
+    - cryptography
+    - designate_dashboard
+    - django-appconf
+    - django-openstack-auth
+    - greenlet
+    - horizon
+    - httplib2
+    - ironic-ui
+    - keystonemiddleware
+    - magnum-ui
+    - mysql-python
+    - neutron-lbaas-dashboard
+    - oslo.config
+    - ply
+    - pymysql
+    - python-keystoneclient
+    - python-memcached
+    - sahara_dashboard
+    - trove_dashboard
+    - virtualenv
+    - virtualenv-tools
+    os_ironic:
+    - cryptography
+    - httplib2
+    - ironic
+    - pymysql
+    - python-ironicclient
+    - python-keystoneclient
+    - python-memcached
+    - python-swiftclient
+    - uwsgi
+    - virtualenv
+    - virtualenv-tools
+    os_keystone:
+    - argparse
+    - cryptography
+    - httplib2
+    - keystone
+    - keystonemiddleware
+    - ldappool
+    - lxml
+    - oslo.log
+    - oslo.middleware
+    - pbr
+    - pyldap
+    - pymysql
+    - pysaml2
+    - python-keystoneclient
+    - python-memcached
+    - python-openstackclient
+    - repoze.lru
+    - uwsgi
+    - virtualenv
+    - virtualenv-tools
+    os_magnum:
+    - httplib2
+    - magnum
+    - mysql-python
+    - osprofiler
+    - pymysql
+    - python-glanceclient
+    - python-keystoneclient
+    - python-memcached
+    - pyyaml
+    - shade
+    - virtualenv
+    - virtualenv-tools
+    os_molteniron:
+    - daemonize
+    - molteniron
+    - pymysql
+    - pyyaml
+    - sqlalchemy
+    - sqlalchemy_utils
+    - virtualenv
+    - virtualenv-tools
+    os_neutron:
+    - cliff
+    - configobj
+    - cryptography
+    - httplib2
+    - keystonemiddleware
+    - neutron
+    - pymysql
+    - python-glanceclient
+    - python-keystoneclient
+    - python-memcached
+    - python-neutronclient
+    - python-novaclient
+    - repoze.lru
+    - virtualenv
+    - virtualenv-tools
+    os_nova:
+    - cryptography
+    - httplib2
+    - keystonemiddleware
+    - libvirt-python
+    - nova
+    - nova-lxd
+    - nova-powervm
+    - pyasn1-modules
+    - pylxd
+    - pymysql
+    - pyopenssl
+    - python-ironicclient
+    - python-keystoneclient
+    - python-memcached
+    - python-novaclient
+    - python-openstackclient
+    - uwsgi
+    - virtualenv
+    - virtualenv-tools
+    - websockify
+    os_octavia:
+    - cryptography
+    - httplib2
+    - keystonemiddleware
+    - octavia
+    - pymysql
+    - python-glanceclient
+    - python-keystoneclient
+    - python-memcached
+    - python-neutronclient
+    - python-novaclient
+    - python-octaviaclient
+    - python-openstackclient
+    - shade
+    - uwsgi
+    - virtualenv
+    - virtualenv-tools
+    os_rally:
+    - ansible==2.3.2.0
+    - pymysql
+    - rally
+    - setuptools
+    - virtualenv
+    - virtualenv-tools
+    os_sahara:
+    - cryptography
+    - httplib2
+    - keystonemiddleware
+    - pymysql
+    - python-keystoneclient
+    - python-memcached
+    - python-saharaclient
+    - sahara
+    - uwsgi
+    - virtualenv
+    - virtualenv-tools
+    - warlock
+    os_swift:
+    - ceilometermiddleware
+    - cryptography
+    - dnspython
+    - ecdsa
+    - httplib2
+    - keystonemiddleware
+    - pyeclib
+    - python-cinderclient
+    - python-keystoneclient
+    - python-memcached
+    - python-swiftclient
+    - swift
+    - swift3
+    - virtualenv
+    - virtualenv-tools
+    os_tempest:
+    - ddt
+    - junitxml
+    - lxml
+    - nose
+    - python-ceilometerclient
+    - python-cinderclient
+    - python-glanceclient
+    - python-heatclient
+    - python-keystoneclient
+    - python-memcached
+    - python-neutronclient
+    - python-novaclient
+    - python-openstackclient
+    - python-saharaclient
+    - python-subunit
+    - python-swiftclient
+    - shade
+    - tempest
+    - testscenarios
+    - virtualenv
+    - virtualenv-tools
+    os_trove:
+    - cryptography
+    - futures
+    - httplib2
+    - mysql-python
+    - os-client-config
+    - pexpect
+    - pymysql
+    - python-glanceclient
+    - python-keystoneclient
+    - python-memcached
+    - python-troveclient
+    - shade
+    - trove
+    - virtualenv
+    pip_install:
+    - pip
+    - setuptools
+    - wheel
+    repo_build:
+    - cython
+    - pbr
+    - requests
+    - urllib3
+    - virtualenv
+    - virtualenv-tools
+    - wheel
+  role_project_groups:
+    ansible-hardening: all
+    apt_package_pinning: all
+    bird: all
+    bootstrap-host: all
+    ceph-defaults: all
+    ceph-mgr: all
+    ceph-mon: all
+    ceph-osd: all
+    ceph_client: all
+    etcd: all
+    galera_client: all
+    galera_server: all
+    haproxy_server: all
+    keepalived: all
+    lxc_container_create: all
+    lxc_hosts: all
+    memcached_server: all
+    openstack_hosts: all
+    openstack_openrc: all
+    os_aodh: aodh_all
+    os_barbican: barbican_all
+    os_ceilometer: ceilometer_all
+    os_cinder: cinder_all
+    os_designate: designate_all
+    os_glance: glance_all
+    os_gnocchi: gnocchi_all
+    os_heat: heat_all
+    os_horizon: horizon_all
+    os_ironic: ironic_all
+    os_keystone: keystone_all
+    os_magnum: magnum_all
+    os_molteniron: molteniron_all
+    os_neutron: neutron_all
+    os_nova: nova_all
+    os_octavia: octavia_all
+    os_rally: utility_all
+    os_sahara: sahara_all
+    os_swift: swift_all
+    os_tempest: utility_all
+    os_trove: trove_all
+    pip_install: all
+    rabbitmq_server: all
+    repo_build: all
+    repo_server: all
+    resolvconf: all
+    rsyslog_client: all
+    rsyslog_server: all
+    sshd: all
+    system_crontab_coordination: all
+    unbound: all
+  role_requirement_files:
+    default:
+      project_group: all
+      txt_file_packages:
+      - ndg-httpsclient>=0.4.2;python_version<'3.0'
+      - netaddr!=0.7.16,>=0.7.13
+      - pip==9.0.3
+      - prettytable<0.8,>=0.7.1
+      - pyasn1!=0.2.3
+      - pyopenssl>=0.14
+      - python-memcached>=1.56
+      - pyyaml>=3.10.0
+      - setuptools==39.0.1
+      - virtualenv>=13.1.0
+      - wheel==0.31.0
+    global_pins:
+      pinned_packages:
+      - pip==9.0.3
+      - setuptools==39.0.1
+      - wheel==0.31.0
+      project_group: all
+  role_requirements:
+    galera_client:
+      galera_client_pip_packages:
+      - mysql-python
+      project_group: all
+    galera_server:
+      galera_pip_packages:
+      - mysql-python
+      - pycrypto
+      project_group: all
+    lxc_hosts:
+      lxc_pip_packages:
+      - lxc-python2
+      project_group: all
+    os_aodh:
+      aodh_pip_packages:
+      - alembic>=0.7.2
+      - aodh
+      - ceilometermiddleware
+      - cryptography
+      - gnocchiclient
+      - pymysql>=0.6.2
+      - python-ceilometerclient
+      - python-memcached
+      - sqlalchemy-utils
+      - sqlalchemy>=0.9.7
+      - warlock
+      aodh_requires_pip_packages:
+      - httplib2
+      - python-keystoneclient
+      - virtualenv
+      - virtualenv-tools
+      project_group: aodh_all
+    os_barbican:
+      barbican_pip_packages:
+      - barbican
+      - pymysql
+      - python-memcached
+      - uwsgi
+      barbican_requires_pip_packages:
+      - python-keystoneclient
+      - virtualenv
+      - virtualenv-tools
+      project_group: barbican_all
+    os_ceilometer:
+      ceilometer_pip_packages:
+      - ceilometer
+      - ceilometermiddleware
+      - cryptography
+      - gnocchiclient
+      - libvirt-python
+      - pymongo
+      - pymysql
+      - python-ceilometerclient
+      - python-memcached
+      - tooz
+      - warlock
+      ceilometer_requires_pip_packages:
+      - httplib2
+      - python-keystoneclient
+      - virtualenv
+      - virtualenv-tools
+      project_group: ceilometer_all
+    os_cinder:
+      cinder_pip_packages:
+      - cinder
+      - cryptography
+      - ecdsa
+      - httplib2
+      - keystonemiddleware
+      - pymysql
+      - python-cinderclient
+      - python-keystoneclient
+      - python-memcached
+      - uwsgi
+      cinder_requires_pip_packages:
+      - httplib2
+      - python-keystoneclient
+      - virtualenv
+      - virtualenv-tools
+      project_group: cinder_all
+    os_designate:
+      designate_pip_packages:
+      - cryptography
+      - designate
+      - pymysql
+      - python-designateclient
+      - python-memcached
+      - warlock
+      designate_requires_pip_packages:
+      - httplib2
+      - python-keystoneclient
+      - virtualenv
+      - virtualenv-tools
+      project_group: designate_all
+    os_glance:
+      glance_pip_packages:
+      - cryptography
+      - glance
+      - keystonemiddleware
+      - os-brick
+      - pymysql
+      - python-cinderclient
+      - python-glanceclient
+      - python-keystoneclient
+      - python-memcached
+      - python-swiftclient
+      - uwsgi
+      - warlock
+      glance_requires_pip_packages:
+      - httplib2
+      - python-keystoneclient
+      - virtualenv
+      - virtualenv-tools
+      project_group: glance_all
+    os_gnocchi:
+      gnocchi_pip_packages:
+      - cryptography
+      - gnocchi[mysql,{{ gnocchi_storage_driver | default('file') }}]
+      - gnocchiclient
+      - keystonemiddleware
+      - python-memcached
+      gnocchi_requires_pip_packages:
+      - httplib2
+      - python-keystoneclient
+      - virtualenv
+      - virtualenv-tools
+      project_group: gnocchi_all
+    os_heat:
+      heat_pip_packages:
+      - cryptography
+      - heat
+      - keystonemiddleware
+      - pymysql
+      - python-ceilometerclient
+      - python-cinderclient
+      - python-glanceclient
+      - python-heatclient
+      - python-keystoneclient
+      - python-memcached
+      - python-neutronclient
+      - python-novaclient
+      - python-openstackclient
+      - python-swiftclient
+      - python-troveclient
+      - uwsgi
+      heat_requires_pip_packages:
+      - httplib2
+      - python-keystoneclient
+      - virtualenv
+      - virtualenv-tools
+      project_group: heat_all
+    os_horizon:
+      horizon_pip_packages:
+      - cryptography
+      - designate_dashboard
+      - django-appconf
+      - django-openstack-auth
+      - greenlet
+      - horizon
+      - ironic-ui
+      - keystonemiddleware
+      - magnum-ui
+      - mysql-python
+      - neutron-lbaas-dashboard
+      - oslo.config
+      - ply
+      - pymysql
+      - python-keystoneclient
+      - python-memcached
+      - sahara_dashboard
+      - trove_dashboard
+      horizon_requires_pip_packages:
+      - httplib2
+      - python-keystoneclient
+      - virtualenv
+      - virtualenv-tools
+      project_group: horizon_all
+    os_ironic:
+      ironic_oneview_optional_pip_packages:
+      - ironic-oneview-cli
+      - ironic-oneviewd
+      ironic_pip_packages:
+      - cryptography
+      - ironic
+      - pymysql
+      - python-ironicclient
+      - python-memcached
+      - python-swiftclient
+      - uwsgi
+      ironic_requires_pip_packages:
+      - httplib2
+      - python-keystoneclient
+      - virtualenv
+      - virtualenv-tools
+      project_group: ironic_all
+    os_keystone:
+      keystone_pip_packages:
+      - argparse
+      - cryptography
+      - keystone
+      - keystonemiddleware
+      - ldappool
+      - lxml
+      - oslo.log
+      - oslo.middleware
+      - pbr
+      - pyldap
+      - pymysql
+      - pysaml2
+      - python-keystoneclient
+      - python-memcached
+      - python-openstackclient
+      - repoze.lru
+      - uwsgi
+      keystone_requires_pip_packages:
+      - httplib2
+      - python-keystoneclient
+      - virtualenv
+      - virtualenv-tools
+      project_group: keystone_all
+    os_magnum:
+      magnum_pip_packages:
+      - magnum
+      - mysql-python
+      - osprofiler
+      - pymysql
+      - python-memcached
+      magnum_requires_pip_packages:
+      - httplib2
+      - python-glanceclient
+      - python-keystoneclient
+      - pyyaml
+      - shade
+      - virtualenv
+      - virtualenv-tools
+      project_group: magnum_all
+    os_molteniron:
+      molteniron_pip_packages:
+      - molteniron
+      molteniron_requires_pip_packages:
+      - daemonize
+      - pymysql
+      - pyyaml
+      - sqlalchemy
+      - sqlalchemy_utils
+      - virtualenv
+      - virtualenv-tools
+      project_group: molteniron_all
+    os_neutron:
+      neutron_optional_bgp_pip_packages:
+      - neutron_dynamic_routing
+      neutron_optional_calico_pip_packages:
+      - networking-calico
+      - python-etcd
+      neutron_optional_dragonflow_pip_packages:
+      - dragonflow
+      - python-etcd
+      neutron_optional_fwaas_pip_packages:
+      - neutron_fwaas
+      neutron_optional_lbaas_pip_packages:
+      - neutron_lbaas
+      neutron_optional_vpnaas_pip_packages:
+      - neutron_vpnaas
+      neutron_pip_packages:
+      - cliff
+      - configobj
+      - cryptography
+      - keystonemiddleware
+      - neutron
+      - pymysql
+      - python-glanceclient
+      - python-keystoneclient
+      - python-memcached
+      - python-neutronclient
+      - python-novaclient
+      - repoze.lru
+      neutron_requires_pip_packages:
+      - httplib2
+      - python-keystoneclient
+      - virtualenv
+      - virtualenv-tools
+      project_group: neutron_all
+    os_nova:
+      nova_compute_ironic_pip_packages:
+      - python-ironicclient
+      nova_compute_lxd_pip_packages:
+      - nova-lxd
+      - pylxd
+      - pyopenssl
+      nova_compute_pip_packages:
+      - libvirt-python
+      nova_compute_powervm_pip_packages:
+      - nova-powervm
+      - pyasn1-modules
+      nova_novnc_pip_packages:
+      - websockify
+      nova_pip_packages:
+      - cryptography
+      - keystonemiddleware
+      - nova
+      - pymysql
+      - python-keystoneclient
+      - python-memcached
+      - python-novaclient
+      - uwsgi
+      nova_requires_pip_packages:
+      - httplib2
+      - python-keystoneclient
+      - python-openstackclient
+      - virtualenv
+      - virtualenv-tools
+      project_group: nova_all
+    os_octavia:
+      octavia_pip_packages:
+      - cryptography
+      - keystonemiddleware
+      - octavia
+      - pymysql
+      - python-glanceclient
+      - python-keystoneclient
+      - python-memcached
+      - python-neutronclient
+      - python-novaclient
+      - python-octaviaclient
+      - python-openstackclient
+      - uwsgi
+      octavia_requires_pip_packages:
+      - httplib2
+      - python-keystoneclient
+      - python-openstackclient
+      - shade
+      - virtualenv
+      - virtualenv-tools
+      project_group: octavia_all
+    os_rally:
+      project_group: utility_all
+      rally_pip_packages:
+      - ansible==2.3.2.0
+      - pymysql
+      - rally
+      - setuptools
+      rally_requires_pip_packages:
+      - virtualenv
+      - virtualenv-tools
+    os_sahara:
+      project_group: sahara_all
+      sahara_pip_packages:
+      - cryptography
+      - keystonemiddleware
+      - pymysql
+      - python-keystoneclient
+      - python-memcached
+      - python-saharaclient
+      - sahara
+      - uwsgi
+      - warlock
+      sahara_requires_pip_packages:
+      - httplib2
+      - python-keystoneclient
+      - virtualenv
+      - virtualenv-tools
+    os_swift:
+      project_group: swift_all
+      swift_pip_packages:
+      - ceilometermiddleware
+      - cryptography
+      - dnspython
+      - ecdsa
+      - keystonemiddleware
+      - pyeclib
+      - python-cinderclient
+      - python-keystoneclient
+      - python-memcached
+      - python-swiftclient
+      - swift
+      - swift3
+      swift_requires_pip_packages:
+      - httplib2
+      - python-keystoneclient
+      - virtualenv
+      - virtualenv-tools
+    os_tempest:
+      project_group: utility_all
+      tempest_pip_packages:
+      - ddt
+      - junitxml
+      - lxml
+      - nose
+      - python-ceilometerclient
+      - python-cinderclient
+      - python-glanceclient
+      - python-heatclient
+      - python-keystoneclient
+      - python-memcached
+      - python-neutronclient
+      - python-novaclient
+      - python-openstackclient
+      - python-saharaclient
+      - python-subunit
+      - python-swiftclient
+      - tempest
+      - testscenarios
+      tempest_requires_pip_packages:
+      - python-glanceclient
+      - python-keystoneclient
+      - python-neutronclient
+      - python-novaclient
+      - shade
+      - virtualenv
+      - virtualenv-tools
+    os_trove:
+      project_group: trove_all
+      trove_pip_packages:
+      - cryptography
+      - mysql-python
+      - os-client-config
+      - pexpect
+      - pymysql
+      - python-memcached
+      - python-troveclient
+      - trove
+      trove_requires_pip_packages:
+      - futures
+      - httplib2
+      - python-glanceclient
+      - python-keystoneclient
+      - shade
+      - virtualenv
+    pip_install:
+      pip_packages:
+      - pip
+      - setuptools
+      - wheel
+      project_group: all
+    repo_build:
+      project_group: all
+      repo_pip_packages:
+      - cython
+      - pbr
+      - requests
+      - urllib3
+      - virtualenv
+      - virtualenv-tools
+      - wheel
