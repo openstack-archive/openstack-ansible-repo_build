@@ -1,0 +1,9 @@
+Code-Review+2: Markos Chandras (hwoarang) <mchandras@suse.de>
+Code-Review+2: Jean-Philippe Evrard <jean-philippe@evrard.me>
+Workflow+1: Jean-Philippe Evrard <jean-philippe@evrard.me>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Tue, 29 May 2018 19:04:39 +0000
+Reviewed-on: https://review.openstack.org/568812
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/stable/ocata
