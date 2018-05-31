@@ -1,0 +1,9 @@
+Code-Review+2: Markos Chandras (hwoarang) <mchandras@suse.de>
+Code-Review+2: Jean-Philippe Evrard <jean-philippe@evrard.me>
+Workflow+1: Jean-Philippe Evrard <jean-philippe@evrard.me>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Thu, 31 May 2018 00:23:33 +0000
+Reviewed-on: https://review.openstack.org/568810
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/stable/pike
