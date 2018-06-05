@@ -30,6 +30,14 @@
     - "{{ repo_build_dir }}"
     - "{{ repo_build_output }}"
 
+- name: Create distutils configuration file with index mirror
+  ini_file:
+    dest: "~/.pydistutils.cfg"
+    section: easy_install
+    option: index_url
+    value: "{{ repo_build_pip_default_index }}"
+  when: repo_build_pip_default_index is defined
+
 - name: Download requirement pip sources
   shell: >-
     set -o pipefail;
