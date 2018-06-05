@@ -1,0 +1,10 @@
+Code-Review+2: Jesse Pretorius (odyssey4me) <jesse.pretorius@rackspace.co.uk>
+Code-Review+1: Ilya Popov <ilya_p@hotmail.com>
+Code-Review+2: Amy Marrich (spotz) <amy@demarco.com>
+Workflow+1: Amy Marrich (spotz) <amy@demarco.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Tue, 05 Jun 2018 20:42:25 +0000
+Reviewed-on: https://review.openstack.org/572422
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/master
