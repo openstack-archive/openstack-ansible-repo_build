@@ -1,0 +1,9 @@
+Code-Review+2: Jean-Philippe Evrard <jean-philippe@evrard.me>
+Code-Review+2: Logan V <logan2211@gmail.com>
+Workflow+1: Logan V <logan2211@gmail.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Tue, 05 Jun 2018 16:40:38 +0000
+Reviewed-on: https://review.openstack.org/572430
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/master
