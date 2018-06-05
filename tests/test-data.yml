@@ -415,9 +415,9 @@
   - egg_name: spice_html5
     fragment: null
     name: spice-html5
-    original: git+https://github.com/SPICE/spice-html5@54cc41299bea8cd681ed0262735e0fd821cd774a#egg=spice_html5&gitname=spice-html5&projectgroup=nova_console
+    original: git+https://gitlab.freedesktop.org/spice/spice-html5@54cc41299bea8cd681ed0262735e0fd821cd774a#egg=spice_html5&gitname=spice-html5&projectgroup=nova_console
     project_group: nova_console
-    url: https://github.com/SPICE/spice-html5
+    url: https://gitlab.freedesktop.org/spice/spice-html5
     version: 54cc41299bea8cd681ed0262735e0fd821cd774a
   - egg_name: swift
     fragment: null
