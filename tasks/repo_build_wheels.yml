@@ -120,7 +120,7 @@
 
 - name: Get /opt/get-pip.py if it does not exist
   get_url:
-    url: "https://bootstrap.pypa.io/get-pip.py"
+    url: "{{ pip_upstream_url | default('https://bootstrap.pypa.io/get-pip.py') }}"
     dest: "/opt/get-pip.py"
     force: no
   register: _get_pip
