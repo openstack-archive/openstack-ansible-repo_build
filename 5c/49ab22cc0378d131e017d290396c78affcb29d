@@ -1,0 +1,9 @@
+Code-Review+2: Mohammed Naser <mnaser@vexxhost.com>
+Code-Review+2: Amy Marrich (spotz) <amy@demarco.com>
+Workflow+1: Amy Marrich (spotz) <amy@demarco.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Wed, 06 Jun 2018 00:48:23 +0000
+Reviewed-on: https://review.openstack.org/572557
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/stable/ocata
