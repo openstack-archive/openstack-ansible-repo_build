@@ -490,7 +490,7 @@
   - git+https://git.openstack.org/openstack/tacker@67404b21e17a1f77daea5fd891b11c5ec04d97ca#egg=tacker&gitname=tacker&projectgroup=tacker_all
   - git+https://git.openstack.org/openstack/trove-dashboard@b3263223779d45377aa13906b8d4422d71e60c1b#egg=trove_dashboard&gitname=trove-dashboard&projectgroup=horizon_all
   - git+https://git.openstack.org/openstack/trove@43d2b96f86a5365d69c885738ea1c3642f4e5aa1#egg=trove&gitname=trove&projectgroup=trove_all
-  - git+https://github.com/SPICE/spice-html5@54cc41299bea8cd681ed0262735e0fd821cd774a#egg=spice_html5&gitname=spice-html5&projectgroup=nova_console
+  - git+https://gitlab.freedesktop.org/spice/spice-html5@54cc41299bea8cd681ed0262735e0fd821cd774a#egg=spice_html5&gitname=spice-html5&projectgroup=nova_console
   - git+https://github.com/gnocchixyz/gnocchi@4.2.0#egg=gnocchi&gitname=gnocchi&projectgroup=gnocchi_all
   - git+https://github.com/novnc/noVNC@37b4d13db81e0e80e117c07b86ff98714c7b6b1a#egg=noVNC&gitname=noVNC&projectgroup=nova_console
   role_packages:
