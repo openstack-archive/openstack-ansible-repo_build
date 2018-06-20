@@ -1,3 +1,4 @@
+---
 # Test data output from the py_pkgs lookup
 # To produce a fresh version of this, execute:
 # /opt/ansible-runtime/bin/python /etc/ansible/roles/plugins/lookup/py_pkgs.py \
