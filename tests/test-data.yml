@@ -88,7 +88,6 @@
   - pyopenssl>=17.1.0
   - pypiserver[cache]==1.2.0
   - python-ceilometerclient
-  - python-cinderclient
   - python-congressclient
   - python-designateclient
   - python-etcd
@@ -546,7 +545,6 @@
     - httplib2
     - keystonemiddleware
     - pymysql
-    - python-cinderclient
     - python-keystoneclient
     - python-memcached
     - shade
@@ -576,7 +574,6 @@
     - keystonemiddleware
     - os-brick
     - pymysql
-    - python-cinderclient
     - python-glanceclient
     - python-keystoneclient
     - python-memcached
@@ -599,7 +596,6 @@
     - keystonemiddleware
     - pymysql
     - python-ceilometerclient
-    - python-cinderclient
     - python-glanceclient
     - python-heatclient
     - python-keystoneclient
@@ -753,7 +749,6 @@
     - httplib2
     - keystonemiddleware
     - pyeclib
-    - python-cinderclient
     - python-keystoneclient
     - python-memcached
     - python-swiftclient
@@ -776,7 +771,6 @@
     - nose
     - os-testr
     - python-ceilometerclient
-    - python-cinderclient
     - python-glanceclient
     - python-heatclient
     - python-keystoneclient
@@ -982,7 +976,6 @@
       - httplib2
       - keystonemiddleware
       - pymysql
-      - python-cinderclient
       - python-keystoneclient
       - python-memcached
       - uwsgi
@@ -1021,7 +1014,6 @@
       - keystonemiddleware
       - os-brick
       - pymysql
-      - python-cinderclient
       - python-glanceclient
       - python-keystoneclient
       - python-memcached
@@ -1051,7 +1043,6 @@
       - keystonemiddleware
       - pymysql
       - python-ceilometerclient
-      - python-cinderclient
       - python-glanceclient
       - python-heatclient
       - python-keystoneclient
@@ -1273,7 +1264,6 @@
       - ecdsa
       - keystonemiddleware
       - pyeclib
-      - python-cinderclient
       - python-keystoneclient
       - python-memcached
       - python-swiftclient
@@ -1306,7 +1296,6 @@
       - nose
       - os-testr
       - python-ceilometerclient
-      - python-cinderclient
       - python-glanceclient
       - python-heatclient
       - python-keystoneclient
