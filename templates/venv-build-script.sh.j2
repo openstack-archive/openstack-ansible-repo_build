@@ -62,16 +62,13 @@ pushd "{{ repo_build_venv_dir }}" &>/dev/null
     [[ -d "${ROLE_VENV_PATH}" ]] && rm -rf "${ROLE_VENV_PATH}"
 
     # If the pip build directory already exists, remove it
-    [[ -d "/opt/${ROLE_VENV_FILE}" ]] && rm -rf "/opt/${ROLE_VENV_FILE}"
+    [[ -d "/tmp/${ROLE_VENV_FILE}" ]] && rm -rf "/tmp/${ROLE_VENV_FILE}"
 
     # Create the virtualenv shell
     ${VENV_CREATE_COMMAND} "${ROLE_VENV_PATH}" &>${ROLE_VENV_LOG}
 
     # Create the pip build directory
-    mkdir -p "/opt/${ROLE_VENV_FILE}"
-
-    # Disable COW attributes on the build directory
-    chattr -R +C "/opt/${ROLE_VENV_FILE}" || true
+    mkdir -p "/tmp/${ROLE_VENV_FILE}"
 
     # Activate the python virtual environment for good measure
     source "${ROLE_VENV_PATH}/bin/activate"
@@ -96,7 +93,7 @@ pushd "{{ repo_build_venv_dir }}" &>/dev/null
     ${ROLE_VENV_PATH}/bin/pip install \
         --disable-pip-version-check \
         --quiet --quiet \
-        --build "/opt/${ROLE_VENV_FILE}" \
+        --build "/tmp/${ROLE_VENV_FILE}" \
         ${PIP_INSTALL_OPTIONS} \
         ${PIP_INDEX_OPTIONS} \
         ${ROLE_VENV_REQUIREMENTS} \
@@ -116,9 +113,10 @@ pushd "{{ repo_build_venv_dir }}" &>/dev/null
 
     # Delete working directories
     rm -rf "${ROLE_VENV_PATH}"
-    rm -rf "/opt/${ROLE_VENV_FILE}"
+    rm -rf "/tmp/${ROLE_VENV_FILE}"
 
 popd &>/dev/null
 
 # Output the end of the build
 echo "done"
+
