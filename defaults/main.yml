@@ -44,8 +44,8 @@ repo_build_release_tag: "untagged"
 repo_build_global_links_path: "{{ repo_build_base_path }}/links"
 repo_build_release_version_path: "os-releases/{{ repo_build_release_tag }}"
 repo_build_release_path: "{{ repo_build_base_path }}/{{ repo_build_release_version_path }}/{{ repo_build_os_distro_version }}"
-repo_build_dir: "/opt/openstack-builder"
-repo_build_output: "/opt/openstack-wheel-output"
+repo_build_dir: "/tmp/openstack-builder"
+repo_build_output: "/tmp/openstack-wheel-output"
 repo_build_git_dir: "{{ repo_build_base_path }}/openstackgit"
 repo_build_pool_dir: "{{ repo_build_base_path }}/pools/{{ repo_build_os_distro_version }}"
 
@@ -88,7 +88,7 @@ repo_build_pip_default_index: "https://pypi.python.org/simple"
 
 repo_build_timeout: 120
 repo_build_concurrency: "{{ (((ansible_processor_vcpus|default(1)) | int) > 4) | ternary(8, 4) }}"
-repo_build_venv_build_dir: "/opt/openstack-venv-builder"
+repo_build_venv_build_dir: "/tmp/openstack-venv-builder"
 repo_build_venv_dir: "{{ repo_build_base_path }}/venvs/{{ repo_build_release_tag }}/{{ repo_build_os_distro_version }}"
 
 # We use find-links here in order to prefer the locally
