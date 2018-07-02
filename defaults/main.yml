@@ -121,3 +121,7 @@ repo_pip_packages:
   - wheel
 
 repo_build_store_pip_sources: false
+
+# Default python packages which will be installed
+# into every venv.
+repo_venv_default_pip_packages: []
