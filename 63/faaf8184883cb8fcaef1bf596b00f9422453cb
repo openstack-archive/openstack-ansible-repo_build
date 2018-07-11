@@ -1,0 +1,10 @@
+Code-Review+2: Mohammed Naser <mnaser@vexxhost.com>
+Code-Review+1: jacky06 <zhang.min@99cloud.net>
+Code-Review+2: Jean-Philippe Evrard <jean-philippe@evrard.me>
+Workflow+1: Jean-Philippe Evrard <jean-philippe@evrard.me>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Wed, 11 Jul 2018 08:02:36 +0000
+Reviewed-on: https://review.openstack.org/576783
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/master
