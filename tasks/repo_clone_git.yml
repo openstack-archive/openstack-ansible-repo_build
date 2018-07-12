@@ -47,6 +47,6 @@
     (item['name'] in slurp_requirements.content | b64decode | splitlines) or
     ((groups[item['project_group']] is defined) and (groups[item['project_group']] | length > 0))
   register: _git_clone
-  until: _git_clone | success
+  until: _git_clone  is success
   delay: 5
   retries: 10

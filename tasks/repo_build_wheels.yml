@@ -132,7 +132,7 @@
     dest: "/opt/get-pip.py"
     force: no
   register: _get_pip
-  until: _get_pip | success
+  until: _get_pip  is success
   retries: 10
   delay: 5
 
