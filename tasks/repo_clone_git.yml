@@ -52,6 +52,6 @@
     force: yes
   with_items: "{{ _repo_build_git_clone_list }}"
   register: _git_clone
-  until: _git_clone  is success
+  until: _git_clone is success
   delay: 5
   retries: 10

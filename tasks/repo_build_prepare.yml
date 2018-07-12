@@ -108,7 +108,7 @@
           --constraint {{ repo_build_release_path }}/requirements_constraints.txt
           {{ pip_install_options }}
       register: install_packages
-      until: install_packages  is success
+      until: install_packages is success
       retries: 5
       delay: 5
   rescue:
@@ -124,7 +124,7 @@
           --constraint {{ repo_build_release_path }}/requirements_constraints.txt
           {{ pip_install_options }}
       register: install_packages
-      until: install_packages  is success
+      until: install_packages is success
       retries: 5
       delay: 5
 
