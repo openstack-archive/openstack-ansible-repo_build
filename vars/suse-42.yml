@@ -34,6 +34,7 @@ repo_build_distro_packages:
   - pcre-devel              # required to build uwsgi
   - python-devel
   - libopenssl-devel        # required to build cryptography
+  - systemd-devel           # required to build systemd-python
   - sqlite2-devel           # required to build pysqlite
   - swig
   - which

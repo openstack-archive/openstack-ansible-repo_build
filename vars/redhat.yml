@@ -31,6 +31,7 @@ repo_build_distro_packages:
   - postgresql-devel        # required to build psycopg2
   - python2-devel
   - openssl-devel           # required to build cryptography
+  - systemd-devel           # required to build systemd-python
   - sqlite-devel            # required to build pysqlite
   - swig
   - which
