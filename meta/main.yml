@@ -37,7 +37,6 @@ galaxy_info:
     - development
     - openstack
 dependencies:
-  - role: pip_install
   - role: apt_package_pinning
     when:
       - ansible_pkg_mgr == 'apt'
