@@ -1,0 +1,10 @@
+Code-Review+2: Jonathan Rosser <jonathan.rosser@rd.bbc.co.uk>
+Code-Review+1: wangqi <wang.qi@99cloud.net>
+Code-Review+2: Mohammed Naser <mnaser@vexxhost.com>
+Workflow+1: Mohammed Naser <mnaser@vexxhost.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Wed, 01 Aug 2018 14:36:25 +0000
+Reviewed-on: https://review.openstack.org/587763
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/master
