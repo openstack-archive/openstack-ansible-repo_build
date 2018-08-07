@@ -102,6 +102,8 @@
       pip:
         name: "{{ repo_pip_packages }}"
         state: "{{ repo_build_pip_package_state }}"
+        virtualenv: "{{ repo_build_bin | dirname }}"
+        virtualenv_site_packages: "no"
         extra_args: >-
           --constraint {{ repo_build_release_path }}/requirements_constraints.txt
           {{ pip_install_options }}
@@ -114,6 +116,8 @@
       pip:
         name: "{{ repo_pip_packages }}"
         state: "{{ repo_build_pip_package_state }}"
+        virtualenv: "{{ repo_build_bin | dirname }}"
+        virtualenv_site_packages: "no"
         extra_args: >-
           --index-url {{ repo_build_pip_default_index }}
           --trusted-host {{ repo_build_pip_default_index | netloc_no_port }}
