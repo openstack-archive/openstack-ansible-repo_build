@@ -128,22 +128,6 @@
     src: "requirements_absolute_requirements.txt.j2"
     dest: "{{ repo_build_release_path }}/requirements_absolute_requirements.txt"
 
-- name: Get /opt/get-pip.py if it does not exist
-  get_url:
-    url: "{{ pip_upstream_url | default('https://bootstrap.pypa.io/3.3/get-pip.py') }}"
-    dest: "/opt/get-pip.py"
-    force: no
-  register: _get_pip
-  until: _get_pip  is success
-  retries: 10
-  delay: 5
-
-- name: Copy get-pip script into release folder
-  copy:
-    src: "/opt/get-pip.py"
-    dest: "{{ repo_build_release_path }}/"
-    remote_src: yes
-
 - name: Clean up temporary build folders to save space
   file:
     path: "{{ item }}"
