@@ -31,6 +31,15 @@
     src: "{{ repo_build_release_path }}/requirements.txt"
   register: slurp_requirements
 
+- name: Build filtered list of repos to clone
+  set_fact:
+     _repo_build_git_clone_list: "{{ _repo_build_git_clone_list | default([]) + [ item ] }}"
+  with_items: "{{ local_packages.results.0.item.remote_package_parts }}"
+  when: >
+    (not repo_build_git_selective | bool) or
+    (item['name'] in slurp_requirements.content | b64decode | splitlines) or
+    ((groups[item['project_group']] is defined) and (groups[item['project_group']] | length > 0))
+
 - name: Clone git repositories
   become: yes
   become_user: "{{ repo_build_service_user_name }}"
@@ -41,11 +50,7 @@
     version: "{{ item['version'] }}"
     depth: "{{ repo_build_git_depth }}"
     force: yes
-  with_items: "{{ local_packages.results.0.item.remote_package_parts }}"
-  when: >
-    (not repo_build_git_selective | bool) or
-    (item['name'] in slurp_requirements.content | b64decode | splitlines) or
-    ((groups[item['project_group']] is defined) and (groups[item['project_group']] | length > 0))
+  with_items: "{{ _repo_build_git_clone_list }}"
   register: _git_clone
   until: _git_clone  is success
   delay: 5
