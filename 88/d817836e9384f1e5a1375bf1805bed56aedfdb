@@ -1,0 +1,10 @@
+Code-Review+2: Jesse Pretorius (odyssey4me) <jesse.pretorius@rackspace.co.uk>
+Code-Review+1: Dimitrios Markou <mardim@intracom-telecom.com>
+Code-Review+2: Jean-Philippe Evrard <jean-philippe@evrard.me>
+Workflow+1: Jean-Philippe Evrard <jean-philippe@evrard.me>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Fri, 24 Aug 2018 12:03:16 +0000
+Reviewed-on: https://review.openstack.org/595747
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/master
