@@ -44,7 +44,7 @@
     dest: "{{ repo_build_release_path }}/requirements.txt"
   register: _wheel_build_requirements
 
-- include: repo_clone_git.yml
+- include_tasks: repo_clone_git.yml
   when:
     - (repo_build_git_reclone | bool) or
       (_wheel_build_requirements | changed)

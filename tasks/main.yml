@@ -24,11 +24,11 @@
   tags:
     - always
 
-- include: repo_build_install.yml
+- include_tasks: repo_build_install.yml
   tags:
     - repo-build-install
 
-- include: repo_build_prepare.yml
+- include_tasks: repo_build_prepare.yml
   tags:
     - always
 
@@ -39,20 +39,20 @@
   tags:
     - always
 
-- include: repo_build_wheels.yml
+- include_tasks: repo_build_wheels.yml
   when:
     - ansible_local['openstack_ansible']['repo_build']['need_wheel_build'] | bool
   tags:
     - repo-build-wheels
 
-- include: repo_build_venvs.yml
+- include_tasks: repo_build_venvs.yml
   tags:
     - repo-build-venvs
 
-- include: repo_build_index.yml
+- include_tasks: repo_build_index.yml
   tags:
     - repo-build-index
 
 # Synchronize all built packages back to the repo master
-- include: repo_package_sync.yml
+- include_tasks: repo_package_sync.yml
   when: inventory_hostname != groups['repo_all'][0]
