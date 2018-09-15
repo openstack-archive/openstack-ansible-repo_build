@@ -25,7 +25,6 @@ repo_build_distro_packages:
   - libjpeg-dev             # required to build pillow
   - libkrb5-dev             # required to build pykerberos
   - libldap2-dev            # required to build python-ldap
-  - libmariadbclient-dev    # required to build MySQL-python
   - libpcre3-dev            # required to build uwsgi
   - libpq-dev               # required to build psycopg2
   - librados-dev            # required to build cradox
