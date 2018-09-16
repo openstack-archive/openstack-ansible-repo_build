@@ -1,0 +1,9 @@
+Code-Review+2: Logan V <logan2211@gmail.com>
+Code-Review+2: Jonathan Rosser <jonathan.rosser@rd.bbc.co.uk>
+Workflow+1: Jonathan Rosser <jonathan.rosser@rd.bbc.co.uk>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Sun, 16 Sep 2018 08:41:00 +0000
+Reviewed-on: https://review.openstack.org/602944
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/master
