@@ -1,0 +1,9 @@
+Code-Review+2: Logan V <logan2211@gmail.com>
+Code-Review+2: Mohammed Naser <mnaser@vexxhost.com>
+Workflow+1: Mohammed Naser <mnaser@vexxhost.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Sun, 16 Sep 2018 02:23:44 +0000
+Reviewed-on: https://review.openstack.org/602887
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/stable/rocky
