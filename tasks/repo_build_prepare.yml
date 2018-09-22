@@ -17,17 +17,13 @@
   ini_file:
     dest: "/etc/ansible/facts.d/openstack_ansible.fact"
     section: repo_build
-    option: "{{ item }}"
+    option: "need_wheel_build"
     value: False
-  with_items:
-    - "need_wheel_build"
-    - "need_venv_build"
   when:
     - "(ansible_local is not defined) or
        ('openstack_ansible' not in ansible_local) or
        ('repo_build' not in ansible_local['openstack_ansible']) or
-       ('need_wheel_build' not in ansible_local['openstack_ansible']['repo_build']) or
-       ('need_venv_build' not in ansible_local['openstack_ansible']['repo_build'])"
+       ('need_wheel_build' not in ansible_local['openstack_ansible']['repo_build'])"
 
 - name: Create package directories
   file:
@@ -76,18 +72,6 @@
     - (_wheel_build_requirements | changed) or
       (_wheel_build_constraints | changed) or
       (repo_build_wheel_rebuild | bool)
-
-- name: Record whether a venv build is required
-  ini_file:
-    dest: "/etc/ansible/facts.d/openstack_ansible.fact"
-    section: repo_build
-    option: "need_venv_build"
-    value: True
-  when:
-    - (_wheel_build_requirements | changed) or
-      (_wheel_build_constraints | changed) or
-      (repo_build_wheel_rebuild | bool) or
-      (repo_build_venv_rebuild | bool)
 
 # Note(odyssey4me):
 # To cater for a situation where the pip packages are changing, but the repo

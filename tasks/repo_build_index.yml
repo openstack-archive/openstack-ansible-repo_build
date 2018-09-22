@@ -18,7 +18,6 @@
     file_type: any
     paths:
       - "{{ repo_build_release_path }}"
-      - "{{ repo_build_venv_dir }}"
   register: manifest_items
   tags:
     - repo-create-release-manifest

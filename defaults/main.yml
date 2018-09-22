@@ -50,7 +50,7 @@ repo_build_git_dir: "{{ repo_build_base_path }}/openstackgit"
 repo_build_pool_dir: "{{ repo_build_base_path }}/pools/{{ repo_build_os_distro_version }}"
 
 # Toggle whether git repositories should be cloned selectively or not
-repo_build_git_selective: "{{ true if (repo_build_wheel_selective | bool and repo_build_venv_selective | bool) else false }}"
+repo_build_git_selective: "{{ repo_build_wheel_selective | bool }}"
 
 # Toggle whether a git clone should be forced
 repo_build_git_reclone: no
@@ -59,19 +59,10 @@ repo_build_git_reclone: no
 repo_build_git_depth: 1
 
 # Toggle whether wheels should be built selectively or not
-repo_build_wheel_selective: "{{ true if repo_build_venv_selective | bool else false }}"
+repo_build_wheel_selective: yes
 
 # Toggle whether a wheel rebuild should be forced
 repo_build_wheel_rebuild: no
-
-# Toggle whether venvs should be built selectively or not
-repo_build_venv_selective: yes
-
-# Toggle whether a venv rebuild should be forced
-repo_build_venv_rebuild: no
-
-# Timeout (in minutes) for a venv build
-repo_build_venv_timeout: 30
 
 # Optionally set this to change the default index from pypi to an alternative
 repo_build_pip_default_index: "https://pypi.python.org/simple"
@@ -87,23 +78,6 @@ repo_build_pip_default_index: "https://pypi.python.org/simple"
 #  - libvirt-python
 
 repo_build_timeout: 120
-repo_build_concurrency: "{{ (((ansible_processor_vcpus|default(1)) | int) > 4) | ternary(8, 4) }}"
-repo_build_venv_build_dir: "/tmp/openstack-venv-builder"
-repo_build_venv_dir: "{{ repo_build_base_path }}/venvs/{{ repo_build_release_tag }}/{{ repo_build_os_distro_version }}"
-
-# We use find-links here in order to prefer the locally
-# built wheels.
-repo_build_venv_pip_install_options: >-
-  --timeout 120
-  --find-links {{ repo_build_release_path }}
-  --pre
-
-# NOTE(odyssey4me):
-# Not using --always-copy for CentOS/SuSE due to
-# https://github.com/pypa/virtualenv/issues/565
-repo_build_venv_command_options: >-
-  {{ virtualenv_bin }}
-  {{ (ansible_pkg_mgr == 'apt') | ternary('--always-copy', '') }}
 
 # Path to the repo build venv binaries
 repo_build_bin: "/openstack/venvs/repo-build-{{ repo_build_release_tag }}/bin"
@@ -117,7 +91,3 @@ repo_pip_packages:
   - wheel
 
 repo_build_store_pip_sources: false
-
-# Default python packages which will be installed
-# into every venv.
-repo_venv_default_pip_packages: []

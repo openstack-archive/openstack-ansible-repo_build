@@ -45,10 +45,6 @@
   tags:
     - repo-build-wheels
 
-- include_tasks: repo_build_venvs.yml
-  tags:
-    - repo-build-venvs
-
 - include_tasks: repo_build_index.yml
   tags:
     - repo-build-index
