@@ -13,6 +13,7 @@
   - ceilometermiddleware
   - cinder
   - cliff
+  - cmd2<0.9.0
   - configobj
   - cryptography
   - cython
@@ -52,6 +53,7 @@
   - netaddr!=0.7.16,>=0.7.13
   - networking-calico
   - neutron
+  - neutron-fwaas-dashboard
   - neutron-lbaas-dashboard
   - neutron_dynamic_routing
   - neutron_fwaas
@@ -107,8 +109,8 @@
   - sahara_dashboard
   - setuptools==39.0.1
   - shade
-  - sqlalchemy
   - sqlalchemy-utils
+  - sqlalchemy>=0.9.7
   - sqlalchemy_utils
   - swift
   - swift3
@@ -128,87 +130,87 @@
   - egg_name: aodh
     fragment: null
     name: aodh
-    original: git+https://git.openstack.org/openstack/aodh@60fba82162ec601256169fcfcf12baa81aeb0855#egg=aodh&gitname=aodh&projectgroup=aodh_all
+    original: git+https://git.openstack.org/openstack/aodh@d04d0cb31ce49af97df1c27ad53881c7c4896087#egg=aodh&gitname=aodh&projectgroup=aodh_all
     project_group: aodh_all
     url: https://git.openstack.org/openstack/aodh
-    version: 60fba82162ec601256169fcfcf12baa81aeb0855
+    version: d04d0cb31ce49af97df1c27ad53881c7c4896087
   - egg_name: barbican
     fragment: null
     name: barbican
-    original: git+https://git.openstack.org/openstack/barbican@bb9e08995380a3d553a94aff5ff85a4cdfe14ef5#egg=barbican&gitname=barbican&projectgroup=barbican_all
+    original: git+https://git.openstack.org/openstack/barbican@5e756a70861e66ee52b7b20d00fc9607ad21d133#egg=barbican&gitname=barbican&projectgroup=barbican_all
     project_group: barbican_all
     url: https://git.openstack.org/openstack/barbican
-    version: bb9e08995380a3d553a94aff5ff85a4cdfe14ef5
+    version: 5e756a70861e66ee52b7b20d00fc9607ad21d133
   - egg_name: ceilometer
     fragment: null
     name: ceilometer
-    original: git+https://git.openstack.org/openstack/ceilometer@51d4ea0a1544db06159a8d8037131428a42cc651#egg=ceilometer&gitname=ceilometer&projectgroup=ceilometer_all
+    original: git+https://git.openstack.org/openstack/ceilometer@0edada98c7a1ab5ab1ee40b3f68cd40f824521c9#egg=ceilometer&gitname=ceilometer&projectgroup=ceilometer_all
     project_group: ceilometer_all
     url: https://git.openstack.org/openstack/ceilometer
-    version: 51d4ea0a1544db06159a8d8037131428a42cc651
+    version: 0edada98c7a1ab5ab1ee40b3f68cd40f824521c9
   - egg_name: cinder
     fragment: null
     name: cinder
-    original: git+https://git.openstack.org/openstack/cinder@acfdbb62f706451bf1faf3d6926e9267028186c8#egg=cinder&gitname=cinder&projectgroup=cinder_all
+    original: git+https://git.openstack.org/openstack/cinder@f5a3708dd3f89bf9ab8d6e66f97a06ffe8ca5eec#egg=cinder&gitname=cinder&projectgroup=cinder_all
     project_group: cinder_all
     url: https://git.openstack.org/openstack/cinder
-    version: acfdbb62f706451bf1faf3d6926e9267028186c8
+    version: f5a3708dd3f89bf9ab8d6e66f97a06ffe8ca5eec
   - egg_name: designate
     fragment: null
     name: designate
-    original: git+https://git.openstack.org/openstack/designate@12fbb38799d6731862f07a9e299d5476a5c02f90#egg=designate&gitname=designate&projectgroup=designate_all
+    original: git+https://git.openstack.org/openstack/designate@c0b20375b6be7a6a572f59eb2913a04d917c51b5#egg=designate&gitname=designate&projectgroup=designate_all
     project_group: designate_all
     url: https://git.openstack.org/openstack/designate
-    version: 12fbb38799d6731862f07a9e299d5476a5c02f90
+    version: c0b20375b6be7a6a572f59eb2913a04d917c51b5
   - egg_name: designate_dashboard
     fragment: null
     name: designate-dashboard
-    original: git+https://git.openstack.org/openstack/designate-dashboard@c5f20d069738d91d34a36e9c99938b282ed9646e#egg=designate_dashboard&gitname=designate-dashboard&projectgroup=horizon_all
+    original: git+https://git.openstack.org/openstack/designate-dashboard@2f0ad3b4cc582130efcc02d7a00bb567ebc8ad4d#egg=designate_dashboard&gitname=designate-dashboard&projectgroup=horizon_all
     project_group: horizon_all
     url: https://git.openstack.org/openstack/designate-dashboard
-    version: c5f20d069738d91d34a36e9c99938b282ed9646e
+    version: 2f0ad3b4cc582130efcc02d7a00bb567ebc8ad4d
   - egg_name: dragonflow
     fragment: null
     name: dragonflow
-    original: git+https://git.openstack.org/openstack/dragonflow@84f1a26ff8e976b753593dc445e09a4c1a675a21#egg=dragonflow&gitname=dragonflow&projectgroup=neutron_all
+    original: git+https://git.openstack.org/openstack/dragonflow@1bca953ac0c9443978da42d2e0477b53e0871c44#egg=dragonflow&gitname=dragonflow&projectgroup=neutron_all
     project_group: neutron_all
     url: https://git.openstack.org/openstack/dragonflow
-    version: 84f1a26ff8e976b753593dc445e09a4c1a675a21
+    version: 1bca953ac0c9443978da42d2e0477b53e0871c44
   - egg_name: glance
     fragment: null
     name: glance
-    original: git+https://git.openstack.org/openstack/glance@5c1f76d91012c9cc7b12f76e917af9e9a9bb7667#egg=glance&gitname=glance&projectgroup=glance_all
+    original: git+https://git.openstack.org/openstack/glance@3ccbf2e03060c58f511d64e0100423ec6a55fc8e#egg=glance&gitname=glance&projectgroup=glance_all
     project_group: glance_all
     url: https://git.openstack.org/openstack/glance
-    version: 5c1f76d91012c9cc7b12f76e917af9e9a9bb7667
+    version: 3ccbf2e03060c58f511d64e0100423ec6a55fc8e
   - egg_name: gnocchi
     fragment: null
     name: gnocchi
-    original: git+https://github.com/gnocchixyz/gnocchi@2934679eab23bc29ad40e27264e6304de8197d43#egg=gnocchi&gitname=gnocchi&projectgroup=gnocchi_all
+    original: git+https://github.com/gnocchixyz/gnocchi@a63ffcecea023b36de1c88801a8ed6833267fe4f#egg=gnocchi&gitname=gnocchi&projectgroup=gnocchi_all
     project_group: gnocchi_all
     url: https://github.com/gnocchixyz/gnocchi
-    version: 2934679eab23bc29ad40e27264e6304de8197d43
+    version: a63ffcecea023b36de1c88801a8ed6833267fe4f
   - egg_name: heat
     fragment: null
     name: heat
-    original: git+https://git.openstack.org/openstack/heat@4dca7dcc5085cbd4c94103500f2846a27fa7d8fa#egg=heat&gitname=heat&projectgroup=heat_all
+    original: git+https://git.openstack.org/openstack/heat@147a5c81171593167eafa45d8cfaac98440ed2ae#egg=heat&gitname=heat&projectgroup=heat_all
     project_group: heat_all
     url: https://git.openstack.org/openstack/heat
-    version: 4dca7dcc5085cbd4c94103500f2846a27fa7d8fa
+    version: 147a5c81171593167eafa45d8cfaac98440ed2ae
   - egg_name: horizon
     fragment: null
     name: horizon
-    original: git+https://git.openstack.org/openstack/horizon@45deda57493d78862b29bc253b972fac0e198a62#egg=horizon&gitname=horizon&projectgroup=horizon_all
+    original: git+https://git.openstack.org/openstack/horizon@f37e5302b1218a2170ea89f3ef10e28c39d0e3d2#egg=horizon&gitname=horizon&projectgroup=horizon_all
     project_group: horizon_all
     url: https://git.openstack.org/openstack/horizon
-    version: 45deda57493d78862b29bc253b972fac0e198a62
+    version: f37e5302b1218a2170ea89f3ef10e28c39d0e3d2
   - egg_name: ironic
     fragment: null
     name: ironic
-    original: git+https://git.openstack.org/openstack/ironic@4ca48b4f60d51e1b0ba8546fd1499270a7ceab09#egg=ironic&gitname=ironic&projectgroup=ironic_all
+    original: git+https://git.openstack.org/openstack/ironic@b392bebcad9e4504d26a45c9dffac60e0bb18ebd#egg=ironic&gitname=ironic&projectgroup=ironic_all
     project_group: ironic_all
     url: https://git.openstack.org/openstack/ironic
-    version: 4ca48b4f60d51e1b0ba8546fd1499270a7ceab09
+    version: b392bebcad9e4504d26a45c9dffac60e0bb18ebd
   - egg_name: ironic_ui
     fragment: null
     name: ironic-ui
@@ -219,24 +221,24 @@
   - egg_name: keystone
     fragment: null
     name: keystone
-    original: git+https://git.openstack.org/openstack/keystone@22af1d9f35c86e9c5bca288c2996be5c19e3cd61#egg=keystone&gitname=keystone&projectgroup=keystone_all
+    original: git+https://git.openstack.org/openstack/keystone@6c63f8eab082b9cc0403727e08a70da6d01579e9#egg=keystone&gitname=keystone&projectgroup=keystone_all
     project_group: keystone_all
     url: https://git.openstack.org/openstack/keystone
-    version: 22af1d9f35c86e9c5bca288c2996be5c19e3cd61
+    version: 6c63f8eab082b9cc0403727e08a70da6d01579e9
   - egg_name: magnum
     fragment: null
     name: magnum
-    original: git+https://git.openstack.org/openstack/magnum@fa04f3d3352fda5b31145be5e29acc2ee3d0481d#egg=magnum&gitname=magnum&projectgroup=magnum_all
+    original: git+https://git.openstack.org/openstack/magnum@d73d912f6a3300ea049a40025ad989cdd237d20c#egg=magnum&gitname=magnum&projectgroup=magnum_all
     project_group: magnum_all
     url: https://git.openstack.org/openstack/magnum
-    version: fa04f3d3352fda5b31145be5e29acc2ee3d0481d
+    version: d73d912f6a3300ea049a40025ad989cdd237d20c
   - egg_name: magnum_ui
     fragment: null
     name: magnum-ui
-    original: git+https://git.openstack.org/openstack/magnum-ui@7d6f02e606064395689dd5ea7430cdae4a6c1fd8#egg=magnum_ui&gitname=magnum-ui&projectgroup=horizon_all
+    original: git+https://git.openstack.org/openstack/magnum-ui@e7cf464917ee433f4b5037181dfe17f244640300#egg=magnum_ui&gitname=magnum-ui&projectgroup=horizon_all
     project_group: horizon_all
     url: https://git.openstack.org/openstack/magnum-ui
-    version: 7d6f02e606064395689dd5ea7430cdae4a6c1fd8
+    version: e7cf464917ee433f4b5037181dfe17f244640300
   - egg_name: molteniron
     fragment: null
     name: molteniron
@@ -247,17 +249,17 @@
   - egg_name: networking_calico
     fragment: null
     name: networking-calico
-    original: git+https://git.openstack.org/openstack/networking-calico@7bfe655fba008e57971ee7ebde14bcd0c236ea53#egg=networking_calico&gitname=networking-calico&projectgroup=neutron_all
+    original: git+https://git.openstack.org/openstack/networking-calico@501fc98c428b8dd6b9dd7bf6908dbcd7b94ead5c#egg=networking_calico&gitname=networking-calico&projectgroup=neutron_all
     project_group: neutron_all
     url: https://git.openstack.org/openstack/networking-calico
-    version: 7bfe655fba008e57971ee7ebde14bcd0c236ea53
+    version: 501fc98c428b8dd6b9dd7bf6908dbcd7b94ead5c
   - egg_name: neutron
     fragment: null
     name: neutron
-    original: git+https://git.openstack.org/openstack/neutron@f3a56676f361bfda8f5095b8937673f97398b201#egg=neutron&gitname=neutron&projectgroup=neutron_all
+    original: git+https://git.openstack.org/openstack/neutron@bd1969bed115400605ea471dcad25228106a7421#egg=neutron&gitname=neutron&projectgroup=neutron_all
     project_group: neutron_all
     url: https://git.openstack.org/openstack/neutron
-    version: f3a56676f361bfda8f5095b8937673f97398b201
+    version: bd1969bed115400605ea471dcad25228106a7421
   - egg_name: neutron_dynamic_routing
     fragment: null
     name: neutron-dynamic-routing
@@ -268,38 +270,38 @@
   - egg_name: neutron_fwaas
     fragment: null
     name: neutron-fwaas
-    original: git+https://git.openstack.org/openstack/neutron-fwaas@d02659fc5da30791eab93bb8dcc362a2b02c0499#egg=neutron_fwaas&gitname=neutron-fwaas&projectgroup=neutron_all
+    original: git+https://git.openstack.org/openstack/neutron-fwaas@2df0379dec47aa55c6aec93537081a8140d3296d#egg=neutron_fwaas&gitname=neutron-fwaas&projectgroup=neutron_all
     project_group: neutron_all
     url: https://git.openstack.org/openstack/neutron-fwaas
-    version: d02659fc5da30791eab93bb8dcc362a2b02c0499
+    version: 2df0379dec47aa55c6aec93537081a8140d3296d
   - egg_name: neutron_lbaas
     fragment: null
     name: neutron-lbaas
-    original: git+https://git.openstack.org/openstack/neutron-lbaas@d52ad67500aacdb4c2a1321363bfe87de4e6b518#egg=neutron_lbaas&gitname=neutron-lbaas&projectgroup=neutron_all
+    original: git+https://git.openstack.org/openstack/neutron-lbaas@824cb33d1a6e5d75c1af82c1506413b26af9688b#egg=neutron_lbaas&gitname=neutron-lbaas&projectgroup=neutron_all
     project_group: neutron_all
     url: https://git.openstack.org/openstack/neutron-lbaas
-    version: d52ad67500aacdb4c2a1321363bfe87de4e6b518
+    version: 824cb33d1a6e5d75c1af82c1506413b26af9688b
   - egg_name: neutron_lbaas_dashboard
     fragment: null
     name: neutron-lbaas-dashboard
-    original: git+https://git.openstack.org/openstack/neutron-lbaas-dashboard@98c7d38419405613662e16326cff7339d10581d3#egg=neutron_lbaas_dashboard&gitname=neutron-lbaas-dashboard&projectgroup=horizon_all
+    original: git+https://git.openstack.org/openstack/neutron-lbaas-dashboard@d65b424532dd924f59dcc23f2489a4785447bd1f#egg=neutron_lbaas_dashboard&gitname=neutron-lbaas-dashboard&projectgroup=horizon_all
     project_group: horizon_all
     url: https://git.openstack.org/openstack/neutron-lbaas-dashboard
-    version: 98c7d38419405613662e16326cff7339d10581d3
+    version: d65b424532dd924f59dcc23f2489a4785447bd1f
   - egg_name: neutron_vpnaas
     fragment: null
     name: neutron-vpnaas
-    original: git+https://git.openstack.org/openstack/neutron-vpnaas@60e4e7113b5fbbf28e97ebce2f40b7f1675200e6#egg=neutron_vpnaas&gitname=neutron-vpnaas&projectgroup=neutron_all
+    original: git+https://git.openstack.org/openstack/neutron-vpnaas@225195c17f77998f03fb60ddbe982d10d882ec2f#egg=neutron_vpnaas&gitname=neutron-vpnaas&projectgroup=neutron_all
     project_group: neutron_all
     url: https://git.openstack.org/openstack/neutron-vpnaas
-    version: 60e4e7113b5fbbf28e97ebce2f40b7f1675200e6
+    version: 225195c17f77998f03fb60ddbe982d10d882ec2f
   - egg_name: nova
     fragment: null
     name: nova
-    original: git+https://git.openstack.org/openstack/nova@57c28a379ff6b998953d92983d3be53db3618b69#egg=nova&gitname=nova&projectgroup=nova_all
+    original: git+https://git.openstack.org/openstack/nova@fb6e79162fb219f237632a65df92fda45850a4d2#egg=nova&gitname=nova&projectgroup=nova_all
     project_group: nova_all
     url: https://git.openstack.org/openstack/nova
-    version: 57c28a379ff6b998953d92983d3be53db3618b69
+    version: fb6e79162fb219f237632a65df92fda45850a4d2
   - egg_name: nova_lxd
     fragment: null
     name: nova-lxd
@@ -310,10 +312,10 @@
   - egg_name: nova_powervm
     fragment: null
     name: nova-powervm
-    original: git+https://git.openstack.org/openstack/nova-powervm@855c4182af7a90dd60db63443a36090dad74aee5#egg=nova_powervm&gitname=nova-powervm&projectgroup=nova_all
+    original: git+https://git.openstack.org/openstack/nova-powervm@89eaf889f76b9885c9a7c3c8eddeb447bbcc5725#egg=nova_powervm&gitname=nova-powervm&projectgroup=nova_all
     project_group: nova_all
     url: https://git.openstack.org/openstack/nova-powervm
-    version: 855c4182af7a90dd60db63443a36090dad74aee5
+    version: 89eaf889f76b9885c9a7c3c8eddeb447bbcc5725
   - egg_name: noVNC
     fragment: null
     name: novnc
@@ -324,10 +326,10 @@
   - egg_name: octavia
     fragment: null
     name: octavia
-    original: git+https://git.openstack.org/openstack/octavia@90599da0412de88b587e3c8249e2a3b77f69f09d#egg=octavia&gitname=octavia&projectgroup=octavia_all
+    original: git+https://git.openstack.org/openstack/octavia@4871cd0ca658aeef93f14fcc5cc8fd972568fbb7#egg=octavia&gitname=octavia&projectgroup=octavia_all
     project_group: octavia_all
     url: https://git.openstack.org/openstack/octavia
-    version: 90599da0412de88b587e3c8249e2a3b77f69f09d
+    version: 4871cd0ca658aeef93f14fcc5cc8fd972568fbb7
   - egg_name: rally
     fragment: null
     name: rally
@@ -338,52 +340,52 @@
   - egg_name: requirements
     fragment: null
     name: requirements
-    original: git+https://git.openstack.org/openstack/requirements@5ca55e452a9fa941cd086d42f15467057867f215#egg=requirements&gitname=requirements&projectgroup=all
+    original: git+https://git.openstack.org/openstack/requirements@09b930e2fb1ae78cb4fcdea0df04623c25105a13#egg=requirements&gitname=requirements&projectgroup=all
     project_group: all
     url: https://git.openstack.org/openstack/requirements
-    version: 5ca55e452a9fa941cd086d42f15467057867f215
+    version: 09b930e2fb1ae78cb4fcdea0df04623c25105a13
   - egg_name: sahara
     fragment: null
     name: sahara
-    original: git+https://git.openstack.org/openstack/sahara@e1f9e3aed86830d038c5c3031c634a8c8d71cea9#egg=sahara&gitname=sahara&projectgroup=sahara_all
+    original: git+https://git.openstack.org/openstack/sahara@9ce0703cbd4a317a6115f25ee05098fcac0559a4#egg=sahara&gitname=sahara&projectgroup=sahara_all
     project_group: sahara_all
     url: https://git.openstack.org/openstack/sahara
-    version: e1f9e3aed86830d038c5c3031c634a8c8d71cea9
+    version: 9ce0703cbd4a317a6115f25ee05098fcac0559a4
   - egg_name: sahara_dashboard
     fragment: null
     name: sahara-dashboard
-    original: git+https://git.openstack.org/openstack/sahara-dashboard@998fa6e34ed7584657e4c544832cd04c94206af0#egg=sahara_dashboard&gitname=sahara-dashboard&projectgroup=horizon_all
+    original: git+https://git.openstack.org/openstack/sahara-dashboard@a240a87cdec584f8f6efc492bc2777bbf0afb629#egg=sahara_dashboard&gitname=sahara-dashboard&projectgroup=horizon_all
     project_group: horizon_all
     url: https://git.openstack.org/openstack/sahara-dashboard
-    version: 998fa6e34ed7584657e4c544832cd04c94206af0
+    version: a240a87cdec584f8f6efc492bc2777bbf0afb629
   - egg_name: spice_html5
     fragment: null
     name: spice-html5
-    original: git+https://github.com/SPICE/spice-html5@54cc41299bea8cd681ed0262735e0fd821cd774a#egg=spice_html5&gitname=spice-html5&projectgroup=nova_console
+    original: git+https://gitlab.freedesktop.org/spice/spice-html5.git@54cc41299bea8cd681ed0262735e0fd821cd774a#egg=spice_html5&gitname=spice-html5&projectgroup=nova_console
     project_group: nova_console
-    url: https://github.com/SPICE/spice-html5
+    url: https://gitlab.freedesktop.org/spice/spice-html5.git
     version: 54cc41299bea8cd681ed0262735e0fd821cd774a
   - egg_name: swift
     fragment: null
     name: swift
-    original: git+https://git.openstack.org/openstack/swift@0ff2d5e3b85a42914a89eac64ed9a87172334a2c#egg=swift&gitname=swift&projectgroup=swift_all
+    original: git+https://git.openstack.org/openstack/swift@2faab63dd789cb6d54eaa83fcdc04adda2f165b9#egg=swift&gitname=swift&projectgroup=swift_all
     project_group: swift_all
     url: https://git.openstack.org/openstack/swift
-    version: 0ff2d5e3b85a42914a89eac64ed9a87172334a2c
+    version: 2faab63dd789cb6d54eaa83fcdc04adda2f165b9
   - egg_name: swift3
     fragment: null
     name: swift3
-    original: git+https://git.openstack.org/openstack/swift3@520b8888343a96ef0253af8701b45f0bd5238264#egg=swift3&gitname=swift3&projectgroup=swift_all
+    original: git+https://git.openstack.org/openstack/swift3@90db5d1510b2a770387961e7bf0fbeae8101ba45#egg=swift3&gitname=swift3&projectgroup=swift_all
     project_group: swift_all
     url: https://git.openstack.org/openstack/swift3
-    version: 520b8888343a96ef0253af8701b45f0bd5238264
+    version: 90db5d1510b2a770387961e7bf0fbeae8101ba45
   - egg_name: trove
     fragment: null
     name: trove
-    original: git+https://git.openstack.org/openstack/trove@c3b1546b95792a54f1e05feb4a94cac3415c1786#egg=trove&gitname=trove&projectgroup=trove_all
+    original: git+https://git.openstack.org/openstack/trove@b1586ae9a53fab4bc9d2e5327595ad84ae359628#egg=trove&gitname=trove&projectgroup=trove_all
     project_group: trove_all
     url: https://git.openstack.org/openstack/trove
-    version: c3b1546b95792a54f1e05feb4a94cac3415c1786
+    version: b1586ae9a53fab4bc9d2e5327595ad84ae359628
   - egg_name: trove_dashboard
     fragment: null
     name: trove-dashboard
@@ -392,44 +394,44 @@
     url: https://git.openstack.org/openstack/trove-dashboard
     version: eb6774f1cd2ed017614f958348a216c977899dac
   remote_packages:
-  - git+https://git.openstack.org/openstack/aodh@60fba82162ec601256169fcfcf12baa81aeb0855#egg=aodh&gitname=aodh&projectgroup=aodh_all
-  - git+https://git.openstack.org/openstack/barbican@bb9e08995380a3d553a94aff5ff85a4cdfe14ef5#egg=barbican&gitname=barbican&projectgroup=barbican_all
-  - git+https://git.openstack.org/openstack/ceilometer@51d4ea0a1544db06159a8d8037131428a42cc651#egg=ceilometer&gitname=ceilometer&projectgroup=ceilometer_all
-  - git+https://git.openstack.org/openstack/cinder@acfdbb62f706451bf1faf3d6926e9267028186c8#egg=cinder&gitname=cinder&projectgroup=cinder_all
-  - git+https://git.openstack.org/openstack/designate-dashboard@c5f20d069738d91d34a36e9c99938b282ed9646e#egg=designate_dashboard&gitname=designate-dashboard&projectgroup=horizon_all
-  - git+https://git.openstack.org/openstack/designate@12fbb38799d6731862f07a9e299d5476a5c02f90#egg=designate&gitname=designate&projectgroup=designate_all
-  - git+https://git.openstack.org/openstack/dragonflow@84f1a26ff8e976b753593dc445e09a4c1a675a21#egg=dragonflow&gitname=dragonflow&projectgroup=neutron_all
-  - git+https://git.openstack.org/openstack/glance@5c1f76d91012c9cc7b12f76e917af9e9a9bb7667#egg=glance&gitname=glance&projectgroup=glance_all
-  - git+https://git.openstack.org/openstack/heat@4dca7dcc5085cbd4c94103500f2846a27fa7d8fa#egg=heat&gitname=heat&projectgroup=heat_all
-  - git+https://git.openstack.org/openstack/horizon@45deda57493d78862b29bc253b972fac0e198a62#egg=horizon&gitname=horizon&projectgroup=horizon_all
+  - git+https://git.openstack.org/openstack/aodh@d04d0cb31ce49af97df1c27ad53881c7c4896087#egg=aodh&gitname=aodh&projectgroup=aodh_all
+  - git+https://git.openstack.org/openstack/barbican@5e756a70861e66ee52b7b20d00fc9607ad21d133#egg=barbican&gitname=barbican&projectgroup=barbican_all
+  - git+https://git.openstack.org/openstack/ceilometer@0edada98c7a1ab5ab1ee40b3f68cd40f824521c9#egg=ceilometer&gitname=ceilometer&projectgroup=ceilometer_all
+  - git+https://git.openstack.org/openstack/cinder@f5a3708dd3f89bf9ab8d6e66f97a06ffe8ca5eec#egg=cinder&gitname=cinder&projectgroup=cinder_all
+  - git+https://git.openstack.org/openstack/designate-dashboard@2f0ad3b4cc582130efcc02d7a00bb567ebc8ad4d#egg=designate_dashboard&gitname=designate-dashboard&projectgroup=horizon_all
+  - git+https://git.openstack.org/openstack/designate@c0b20375b6be7a6a572f59eb2913a04d917c51b5#egg=designate&gitname=designate&projectgroup=designate_all
+  - git+https://git.openstack.org/openstack/dragonflow@1bca953ac0c9443978da42d2e0477b53e0871c44#egg=dragonflow&gitname=dragonflow&projectgroup=neutron_all
+  - git+https://git.openstack.org/openstack/glance@3ccbf2e03060c58f511d64e0100423ec6a55fc8e#egg=glance&gitname=glance&projectgroup=glance_all
+  - git+https://git.openstack.org/openstack/heat@147a5c81171593167eafa45d8cfaac98440ed2ae#egg=heat&gitname=heat&projectgroup=heat_all
+  - git+https://git.openstack.org/openstack/horizon@f37e5302b1218a2170ea89f3ef10e28c39d0e3d2#egg=horizon&gitname=horizon&projectgroup=horizon_all
   - git+https://git.openstack.org/openstack/ironic-ui@783a3283100d0256e45db4f33a913556416a5bc6#egg=ironic_ui&gitname=ironic-ui&projectgroup=horizon_all
-  - git+https://git.openstack.org/openstack/ironic@4ca48b4f60d51e1b0ba8546fd1499270a7ceab09#egg=ironic&gitname=ironic&projectgroup=ironic_all
-  - git+https://git.openstack.org/openstack/keystone@22af1d9f35c86e9c5bca288c2996be5c19e3cd61#egg=keystone&gitname=keystone&projectgroup=keystone_all
-  - git+https://git.openstack.org/openstack/magnum-ui@7d6f02e606064395689dd5ea7430cdae4a6c1fd8#egg=magnum_ui&gitname=magnum-ui&projectgroup=horizon_all
-  - git+https://git.openstack.org/openstack/magnum@fa04f3d3352fda5b31145be5e29acc2ee3d0481d#egg=magnum&gitname=magnum&projectgroup=magnum_all
+  - git+https://git.openstack.org/openstack/ironic@b392bebcad9e4504d26a45c9dffac60e0bb18ebd#egg=ironic&gitname=ironic&projectgroup=ironic_all
+  - git+https://git.openstack.org/openstack/keystone@6c63f8eab082b9cc0403727e08a70da6d01579e9#egg=keystone&gitname=keystone&projectgroup=keystone_all
+  - git+https://git.openstack.org/openstack/magnum-ui@e7cf464917ee433f4b5037181dfe17f244640300#egg=magnum_ui&gitname=magnum-ui&projectgroup=horizon_all
+  - git+https://git.openstack.org/openstack/magnum@d73d912f6a3300ea049a40025ad989cdd237d20c#egg=magnum&gitname=magnum&projectgroup=magnum_all
   - git+https://git.openstack.org/openstack/molteniron@094276cda77d814d07ad885e7d63de8d1243750a#egg=molteniron&gitname=molteniron&projectgroup=molteniron_all
-  - git+https://git.openstack.org/openstack/networking-calico@7bfe655fba008e57971ee7ebde14bcd0c236ea53#egg=networking_calico&gitname=networking-calico&projectgroup=neutron_all
+  - git+https://git.openstack.org/openstack/networking-calico@501fc98c428b8dd6b9dd7bf6908dbcd7b94ead5c#egg=networking_calico&gitname=networking-calico&projectgroup=neutron_all
   - git+https://git.openstack.org/openstack/neutron-dynamic-routing@c1914078fc2d75ca18e875cdc55a3ee49a9bcd9c#egg=neutron_dynamic_routing&gitname=neutron-dynamic-routing&projectgroup=neutron_all
-  - git+https://git.openstack.org/openstack/neutron-fwaas@d02659fc5da30791eab93bb8dcc362a2b02c0499#egg=neutron_fwaas&gitname=neutron-fwaas&projectgroup=neutron_all
-  - git+https://git.openstack.org/openstack/neutron-lbaas-dashboard@98c7d38419405613662e16326cff7339d10581d3#egg=neutron_lbaas_dashboard&gitname=neutron-lbaas-dashboard&projectgroup=horizon_all
-  - git+https://git.openstack.org/openstack/neutron-lbaas@d52ad67500aacdb4c2a1321363bfe87de4e6b518#egg=neutron_lbaas&gitname=neutron-lbaas&projectgroup=neutron_all
-  - git+https://git.openstack.org/openstack/neutron-vpnaas@60e4e7113b5fbbf28e97ebce2f40b7f1675200e6#egg=neutron_vpnaas&gitname=neutron-vpnaas&projectgroup=neutron_all
-  - git+https://git.openstack.org/openstack/neutron@f3a56676f361bfda8f5095b8937673f97398b201#egg=neutron&gitname=neutron&projectgroup=neutron_all
+  - git+https://git.openstack.org/openstack/neutron-fwaas@2df0379dec47aa55c6aec93537081a8140d3296d#egg=neutron_fwaas&gitname=neutron-fwaas&projectgroup=neutron_all
+  - git+https://git.openstack.org/openstack/neutron-lbaas-dashboard@d65b424532dd924f59dcc23f2489a4785447bd1f#egg=neutron_lbaas_dashboard&gitname=neutron-lbaas-dashboard&projectgroup=horizon_all
+  - git+https://git.openstack.org/openstack/neutron-lbaas@824cb33d1a6e5d75c1af82c1506413b26af9688b#egg=neutron_lbaas&gitname=neutron-lbaas&projectgroup=neutron_all
+  - git+https://git.openstack.org/openstack/neutron-vpnaas@225195c17f77998f03fb60ddbe982d10d882ec2f#egg=neutron_vpnaas&gitname=neutron-vpnaas&projectgroup=neutron_all
+  - git+https://git.openstack.org/openstack/neutron@bd1969bed115400605ea471dcad25228106a7421#egg=neutron&gitname=neutron&projectgroup=neutron_all
   - git+https://git.openstack.org/openstack/nova-lxd@a9234659779e3c054a7db976c830826f571e1db6#egg=nova_lxd&gitname=nova-lxd&projectgroup=nova_all
-  - git+https://git.openstack.org/openstack/nova-powervm@855c4182af7a90dd60db63443a36090dad74aee5#egg=nova_powervm&gitname=nova-powervm&projectgroup=nova_all
-  - git+https://git.openstack.org/openstack/nova@57c28a379ff6b998953d92983d3be53db3618b69#egg=nova&gitname=nova&projectgroup=nova_all
-  - git+https://git.openstack.org/openstack/octavia@90599da0412de88b587e3c8249e2a3b77f69f09d#egg=octavia&gitname=octavia&projectgroup=octavia_all
+  - git+https://git.openstack.org/openstack/nova-powervm@89eaf889f76b9885c9a7c3c8eddeb447bbcc5725#egg=nova_powervm&gitname=nova-powervm&projectgroup=nova_all
+  - git+https://git.openstack.org/openstack/nova@fb6e79162fb219f237632a65df92fda45850a4d2#egg=nova&gitname=nova&projectgroup=nova_all
+  - git+https://git.openstack.org/openstack/octavia@4871cd0ca658aeef93f14fcc5cc8fd972568fbb7#egg=octavia&gitname=octavia&projectgroup=octavia_all
   - git+https://git.openstack.org/openstack/rally@8d2faecc098130bc3c0c69fb0e610aeac6bc6c0b#egg=rally&gitname=rally&projectgroup=utility_all&venvwithindex=True&ignorerequirements=True
-  - git+https://git.openstack.org/openstack/requirements@5ca55e452a9fa941cd086d42f15467057867f215#egg=requirements&gitname=requirements&projectgroup=all
-  - git+https://git.openstack.org/openstack/sahara-dashboard@998fa6e34ed7584657e4c544832cd04c94206af0#egg=sahara_dashboard&gitname=sahara-dashboard&projectgroup=horizon_all
-  - git+https://git.openstack.org/openstack/sahara@e1f9e3aed86830d038c5c3031c634a8c8d71cea9#egg=sahara&gitname=sahara&projectgroup=sahara_all
-  - git+https://git.openstack.org/openstack/swift3@520b8888343a96ef0253af8701b45f0bd5238264#egg=swift3&gitname=swift3&projectgroup=swift_all
-  - git+https://git.openstack.org/openstack/swift@0ff2d5e3b85a42914a89eac64ed9a87172334a2c#egg=swift&gitname=swift&projectgroup=swift_all
+  - git+https://git.openstack.org/openstack/requirements@09b930e2fb1ae78cb4fcdea0df04623c25105a13#egg=requirements&gitname=requirements&projectgroup=all
+  - git+https://git.openstack.org/openstack/sahara-dashboard@a240a87cdec584f8f6efc492bc2777bbf0afb629#egg=sahara_dashboard&gitname=sahara-dashboard&projectgroup=horizon_all
+  - git+https://git.openstack.org/openstack/sahara@9ce0703cbd4a317a6115f25ee05098fcac0559a4#egg=sahara&gitname=sahara&projectgroup=sahara_all
+  - git+https://git.openstack.org/openstack/swift3@90db5d1510b2a770387961e7bf0fbeae8101ba45#egg=swift3&gitname=swift3&projectgroup=swift_all
+  - git+https://git.openstack.org/openstack/swift@2faab63dd789cb6d54eaa83fcdc04adda2f165b9#egg=swift&gitname=swift&projectgroup=swift_all
   - git+https://git.openstack.org/openstack/trove-dashboard@eb6774f1cd2ed017614f958348a216c977899dac#egg=trove_dashboard&gitname=trove-dashboard&projectgroup=horizon_all
-  - git+https://git.openstack.org/openstack/trove@c3b1546b95792a54f1e05feb4a94cac3415c1786#egg=trove&gitname=trove&projectgroup=trove_all
-  - git+https://gitlab.freedesktop.org/spice/spice-html5@54cc41299bea8cd681ed0262735e0fd821cd774a#egg=spice_html5&gitname=spice-html5&projectgroup=nova_console
-  - git+https://github.com/gnocchixyz/gnocchi@2934679eab23bc29ad40e27264e6304de8197d43#egg=gnocchi&gitname=gnocchi&projectgroup=gnocchi_all
+  - git+https://git.openstack.org/openstack/trove@b1586ae9a53fab4bc9d2e5327595ad84ae359628#egg=trove&gitname=trove&projectgroup=trove_all
+  - git+https://github.com/gnocchixyz/gnocchi@a63ffcecea023b36de1c88801a8ed6833267fe4f#egg=gnocchi&gitname=gnocchi&projectgroup=gnocchi_all
   - git+https://github.com/novnc/noVNC@b5c982ea4207a711a6d335019eb890ac9c3a538c#egg=noVNC&gitname=noVNC&projectgroup=nova_console
+  - git+https://gitlab.freedesktop.org/spice/spice-html5.git@54cc41299bea8cd681ed0262735e0fd821cd774a#egg=spice_html5&gitname=spice-html5&projectgroup=nova_console
   role_packages:
     galera_client:
     - mysql-python
@@ -559,7 +561,7 @@
     - ironic-ui
     - keystonemiddleware
     - magnum-ui
-    - mysql-python
+    - neutron-fwaas-dashboard
     - neutron-lbaas-dashboard
     - oslo.config
     - ply
@@ -606,7 +608,6 @@
     os_magnum:
     - httplib2
     - magnum
-    - mysql-python
     - osprofiler
     - pymysql
     - python-glanceclient
@@ -645,7 +646,6 @@
     - cryptography
     - httplib2
     - keystonemiddleware
-    - libvirt-python
     - nova
     - nova-lxd
     - nova-powervm
@@ -681,6 +681,7 @@
     - virtualenv-tools
     os_rally:
     - ansible==2.3.2.0
+    - cmd2<0.9.0
     - pymysql
     - rally
     - setuptools
@@ -716,6 +717,7 @@
     - virtualenv
     - virtualenv-tools
     os_tempest:
+    - cmd2<0.9.0
     - ddt
     - junitxml
     - lxml
@@ -741,7 +743,6 @@
     - cryptography
     - futures
     - httplib2
-    - mysql-python
     - os-client-config
     - pexpect
     - pymysql
@@ -999,7 +1000,7 @@
       - ironic-ui
       - keystonemiddleware
       - magnum-ui
-      - mysql-python
+      - neutron-fwaas-dashboard
       - neutron-lbaas-dashboard
       - oslo.config
       - ply
@@ -1060,7 +1061,6 @@
     os_magnum:
       magnum_pip_packages:
       - magnum
-      - mysql-python
       - osprofiler
       - pymysql
       - python-memcached
@@ -1126,8 +1126,6 @@
       - nova-lxd
       - pylxd
       - pyopenssl
-      nova_compute_pip_packages:
-      - libvirt-python
       nova_compute_powervm_pip_packages:
       - nova-powervm
       - pyasn1-modules
@@ -1175,6 +1173,7 @@
       project_group: utility_all
       rally_pip_packages:
       - ansible==2.3.2.0
+      - cmd2<0.9.0
       - pymysql
       - rally
       - setuptools
@@ -1221,6 +1220,7 @@
     os_tempest:
       project_group: utility_all
       tempest_pip_packages:
+      - cmd2<0.9.0
       - ddt
       - junitxml
       - lxml
@@ -1251,7 +1251,6 @@
       project_group: trove_all
       trove_pip_packages:
       - cryptography
-      - mysql-python
       - os-client-config
       - pexpect
       - pymysql
