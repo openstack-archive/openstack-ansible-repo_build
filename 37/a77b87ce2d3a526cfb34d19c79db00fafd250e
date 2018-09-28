@@ -1,0 +1,9 @@
+Code-Review+2: Mohammed Naser <mnaser@vexxhost.com>
+Code-Review+2: Markos Chandras (hwoarang) <mchandras@suse.de>
+Workflow+1: Markos Chandras (hwoarang) <mchandras@suse.de>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Fri, 28 Sep 2018 14:36:22 +0000
+Reviewed-on: https://review.openstack.org/605692
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/stable/ocata
