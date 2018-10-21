@@ -1,0 +1,8 @@
+Code-Review+2: Mohammed Naser <mnaser@vexxhost.com>
+Workflow+1: Mohammed Naser <mnaser@vexxhost.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Sun, 21 Oct 2018 16:28:23 +0000
+Reviewed-on: https://review.openstack.org/612097
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/master
