@@ -34,7 +34,7 @@ repo_build_distro_packages:
   - python-devel
   - libopenssl-devel        # required to build cryptography
   - systemd-devel           # required to build systemd-python
-  - sqlite2-devel           # required to build pysqlite
+  - sqlite-devel            # required to build pysqlite
   - swig
   - which
   - tar                     # required for /opt/op-venv-script.sh
