@@ -104,6 +104,7 @@ repo_build_venv_pip_install_options: >-
 repo_build_venv_command_options: >-
   {{ virtualenv_bin }}
   {{ (ansible_pkg_mgr == 'apt') | ternary('--always-copy', '') }}
+  --no-download
 
 # Path to the repo build venv binaries
 repo_build_bin: "/openstack/venvs/repo-build-{{ repo_build_release_tag }}/bin"
