@@ -1,0 +1,9 @@
+Code-Review+2: Jonathan Rosser <jonathan.rosser@rd.bbc.co.uk>
+Code-Review+2: Markos Chandras (hwoarang) <mchandras@suse.de>
+Workflow+1: Markos Chandras (hwoarang) <mchandras@suse.de>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Fri, 26 Oct 2018 13:25:59 +0000
+Reviewed-on: https://review.openstack.org/608714
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/stable/rocky
