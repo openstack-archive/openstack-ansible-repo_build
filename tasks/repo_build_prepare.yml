@@ -73,6 +73,11 @@
       (_wheel_build_constraints | changed) or
       (repo_build_wheel_rebuild | bool)
 
+- name: Create the virtualenv (if it does not exist)
+  command: "virtualenv --never-download --no-site-packages {{ repo_build_bin | dirname }}"
+  args:
+    creates: "{{ repo_build_bin }}/activate"
+
 # Note(odyssey4me):
 # To cater for a situation where the pip packages are changing, but the repo
 # does not yet have the package built, we need to ensure that this task can
@@ -82,6 +87,23 @@
   tags:
     - repo-build-install
   block:
+    - name: Upgrade pip/setuptools/wheel to the versions we want (from repo)
+      pip:
+        name:
+          - pip
+          - setuptools
+          - wheel
+        state: "{{ repo_build_pip_package_state }}"
+        virtualenv: "{{ repo_build_bin | dirname }}"
+        virtualenv_site_packages: "no"
+        extra_args: >-
+          --constraint {{ repo_build_release_path }}/requirements_constraints.txt
+          {{ pip_install_options | default('') }}
+      register: install_packages
+      until: install_packages is success
+      retries: 5
+      delay: 2
+
     - name: Install pip packages (from repo)
       pip:
         name: "{{ repo_pip_packages }}"
@@ -90,12 +112,31 @@
         virtualenv_site_packages: "no"
         extra_args: >-
           --constraint {{ repo_build_release_path }}/requirements_constraints.txt
-          {{ pip_install_options }}
+          {{ pip_install_options | default('') }}
       register: install_packages
       until: install_packages is success
       retries: 5
       delay: 5
   rescue:
+    - name: Upgrade pip/setuptools/wheel to the versions we want (from pypi mirror)
+      pip:
+        name:
+          - pip
+          - setuptools
+          - wheel
+        state: "{{ repo_build_pip_package_state }}"
+        virtualenv: "{{ repo_build_bin | dirname }}"
+        virtualenv_site_packages: "no"
+        extra_args: >-
+          --index-url {{ repo_build_pip_default_index }}
+          --trusted-host {{ repo_build_pip_default_index | netloc_no_port }}
+          --constraint {{ repo_build_release_path }}/requirements_constraints.txt
+          {{ pip_install_options | default('') }}
+      register: install_packages
+      until: install_packages is success
+      retries: 5
+      delay: 2
+
     - name: Install pip packages (from pypi mirror)
       pip:
         name: "{{ repo_pip_packages }}"
@@ -106,7 +147,7 @@
           --index-url {{ repo_build_pip_default_index }}
           --trusted-host {{ repo_build_pip_default_index | netloc_no_port }}
           --constraint {{ repo_build_release_path }}/requirements_constraints.txt
-          {{ pip_install_options }}
+          {{ pip_install_options | default('') }}
       register: install_packages
       until: install_packages is success
       retries: 5
