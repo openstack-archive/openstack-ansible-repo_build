@@ -1,0 +1,9 @@
+Code-Review+2: Amy Marrich (spotz) <amy@demarco.com>
+Code-Review+2: Markos Chandras (hwoarang) <mchandras@suse.de>
+Workflow+1: Markos Chandras (hwoarang) <mchandras@suse.de>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Fri, 02 Nov 2018 17:13:43 +0000
+Reviewed-on: https://review.openstack.org/615213
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/stable/rocky
