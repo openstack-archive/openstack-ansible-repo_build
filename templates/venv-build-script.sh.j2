@@ -96,6 +96,14 @@ pushd "{{ repo_build_venv_dir }}" &>/dev/null
         ${ROLE_VENV_REQUIREMENTS} \
         --log "${ROLE_VENV_LOG}"
 
+    # If the lib64 symlink exists, change it to a relative symlink
+    # so that it works when extracting the venv from the tarball
+    if [[ -L ${ROLE_VENV_PATH}/lib64 ]]; then
+      pushd ${ROLE_VENV_PATH} &>/dev/null
+        ln -sfn lib lib64
+      popd &>/dev/null
+    fi
+
     # Deactivate the venv for good measure
     deactivate
 
