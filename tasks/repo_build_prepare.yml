@@ -129,7 +129,7 @@
         virtualenv_site_packages: "no"
         extra_args: >-
           --index-url {{ repo_build_pip_default_index }}
-          --trusted-host {{ repo_build_pip_default_index | netloc_no_port }}
+          --trusted-host {{ repo_build_pip_default_index | urlsplit('hostname') }}
           --constraint {{ repo_build_release_path }}/requirements_constraints.txt
           {{ pip_install_options | default('') }}
       register: install_packages
@@ -145,7 +145,7 @@
         virtualenv_site_packages: "no"
         extra_args: >-
           --index-url {{ repo_build_pip_default_index }}
-          --trusted-host {{ repo_build_pip_default_index | netloc_no_port }}
+          --trusted-host {{ repo_build_pip_default_index | urlsplit('hostname') }}
           --constraint {{ repo_build_release_path }}/requirements_constraints.txt
           {{ pip_install_options | default('') }}
       register: install_packages
