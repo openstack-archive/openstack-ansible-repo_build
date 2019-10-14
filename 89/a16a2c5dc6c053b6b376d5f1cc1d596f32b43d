@@ -1,0 +1,9 @@
+Code-Review+2: Mohammed Naser <mnaser@vexxhost.com>
+Workflow+1: Mohammed Naser <mnaser@vexxhost.com>
+Verified-1: Zuul
+Verified+2: Clark Boylan <cboylan@sapwetik.org>
+Submitted-by: Clark Boylan <cboylan@sapwetik.org>
+Submitted-at: Mon, 14 Oct 2019 20:26:56 +0000
+Reviewed-on: https://review.opendev.org/688464
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/stable/queens
