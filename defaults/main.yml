@@ -41,7 +41,7 @@ repo_build_base_path: "/var/www/repo"
 repo_build_os_distro_version: "{{ (ansible_distribution | lower) | replace(' ', '_') }}-{{ ansible_distribution_version.split('.')[:2] | join('.') }}-{{ ansible_architecture | lower }}"
 
 repo_build_release_tag: "untagged"
-repo_build_global_links_path: "{{ repo_build_base_path }}/links"
+repo_build_global_links_path: "{{ repo_build_base_path }}/links/{{ repo_build_os_distro_version }}"
 repo_build_release_version_path: "os-releases/{{ repo_build_release_tag }}"
 repo_build_release_path: "{{ repo_build_base_path }}/{{ repo_build_release_version_path }}/{{ repo_build_os_distro_version }}"
 repo_build_dir: "/tmp/openstack-builder"
