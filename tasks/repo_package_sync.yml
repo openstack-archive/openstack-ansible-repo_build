@@ -33,7 +33,8 @@
       dest: "{{ repo_build_base_path }}/pools"
   become: true
   become_user: "{{ repo_build_service_user_name }}"
-  changed_when: false
+  register: _sync_files
+  changed_when: _sync_files.stdout
   tags:
     # don't trigger ANSIBLE0006. remove when synchronize module is used
     - skip_ansible_lint
