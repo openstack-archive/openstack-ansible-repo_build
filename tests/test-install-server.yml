@@ -19,16 +19,15 @@
   roles:
     - "repo_server"
   post_tasks:
-
     - name: Check if the git cache exists on deployment host
       local_action:
         module: stat
-        path: "/opt/git/openstack"
+        path: "/opt/git/opendev.org/openstack"
       register: _local_git_cache
 
     - name: Pre-cache the keystone git repository (from git cache)
       synchronize:
-        src: "/opt/git/openstack/keystone/"
+        src: "/opt/git/opendev.org/openstack/keystone/"
         dest: "/var/www/repo/openstackgit/keystone"
       when:
         - _local_git_cache.stat is defined
@@ -36,7 +35,7 @@
 
     - name: Pre-cache the keystone git repository (from git source)
       git:
-        repo: "https://git.openstack.org/openstack/keystone"
+        repo: "https://opendev.org/openstack/keystone"
         dest: "/var/www/repo/openstackgit/keystone"
         clone: yes
         update: yes
@@ -50,7 +49,7 @@
 
     - name: Pre-cache the tempest git repository (from git source)
       git:
-        repo: "https://git.openstack.org/openstack/tempest"
+        repo: "https://opendev.org/openstack/tempest"
         dest: "/var/www/repo/openstackgit/tempest"
         clone: yes
         update: yes
