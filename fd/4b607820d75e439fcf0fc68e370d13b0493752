@@ -1,0 +1,10 @@
+Code-Review+2: Jonathan Rosser <jonathan.rosser@rd.bbc.co.uk>
+Code-Review+1: Erik Berg <openstack@slipsprogrammor.no>
+Code-Review+2: Dmitriy Rabotyagov (noonedeadpunk) <noonedeadpunk@ya.ru>
+Workflow+1: Dmitriy Rabotyagov (noonedeadpunk) <noonedeadpunk@ya.ru>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Mon, 16 Mar 2020 18:38:43 +0000
+Reviewed-on: https://review.opendev.org/712914
+Project: openstack/openstack-ansible-repo_build
+Branch: refs/heads/master
